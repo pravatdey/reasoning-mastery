@@ -92,6 +92,33 @@ class ReasoningVideoPipeline:
             self._playlist_mgr = PlaylistManager(self.yt_auth)
         return self._playlist_mgr
 
+    def _read_progress(self) -> int:
+        """Read next part number from progress.json"""
+        try:
+            with open("progress.json", "r") as f:
+                data = json.load(f)
+            return data.get("next_part", 1)
+        except Exception:
+            return 1
+
+    def _save_progress(self, completed_part: int) -> None:
+        """Save progress to progress.json (persists across GitHub Actions runs)"""
+        try:
+            with open("progress.json", "r") as f:
+                data = json.load(f)
+        except Exception:
+            data = {"next_part": 1, "completed": []}
+
+        if completed_part not in data.get("completed", []):
+            data["completed"].append(completed_part)
+        data["next_part"] = completed_part + 1
+        data["completed"] = sorted(data["completed"])
+
+        with open("progress.json", "w") as f:
+            json.dump(data, f, indent=2)
+
+        self.logger.info(f"Progress saved: next_part={completed_part + 1}")
+
     async def run(self, part_number: int = None, upload: bool = True,
                   test_mode: bool = False) -> dict:
         """
@@ -112,7 +139,9 @@ class ReasoningVideoPipeline:
             if part_number:
                 topic = self.syllabus.get_topic_by_part(part_number)
             else:
-                topic = self.syllabus.get_next_topic()
+                # Read progress from progress.json (for GitHub Actions persistence)
+                next_part = self._read_progress()
+                topic = self.syllabus.get_topic_by_part(next_part)
 
             if not topic:
                 self.logger.error("No topic available")
@@ -234,6 +263,9 @@ class ReasoningVideoPipeline:
             # Update playlist description
             progress = self.db.get_progress()
             self.playlist_mgr.update_description(progress["uploaded"])
+
+            # Save progress for next run
+            self._save_progress(topic.part)
 
             self.logger.info(f"=== Part {topic.part} COMPLETE: {upload_result.video_url} ===")
             result["success"] = True
