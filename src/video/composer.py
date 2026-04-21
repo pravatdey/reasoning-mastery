@@ -6,6 +6,11 @@ Prepends a channel intro video before the lesson content.
 from pathlib import Path
 from typing import Optional
 
+# Fix for Pillow 10+ (ANTIALIAS removed, use LANCZOS)
+import PIL.Image
+if not hasattr(PIL.Image, 'ANTIALIAS'):
+    PIL.Image.ANTIALIAS = PIL.Image.LANCZOS
+
 from moviepy.editor import (
     concatenate_videoclips, AudioFileClip, CompositeAudioClip,
     VideoFileClip

@@ -2,6 +2,10 @@
 Video animation effects using MoviePy
 """
 
+import PIL.Image
+if not hasattr(PIL.Image, 'ANTIALIAS'):
+    PIL.Image.ANTIALIAS = PIL.Image.LANCZOS
+
 import numpy as np
 from moviepy.editor import VideoClip, ImageClip, CompositeVideoClip
 
