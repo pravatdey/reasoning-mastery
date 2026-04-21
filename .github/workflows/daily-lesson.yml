@@ -1,19 +1,18 @@
-name: Daily Reasoning Video - Auto Upload
+name: Daily Reasoning Video
 
 on:
   schedule:
-    - cron: '30 0 * * *'  # 6:00 AM IST daily
+    - cron: '30 0 * * *'
   workflow_dispatch:
     inputs:
       part_number:
-        description: 'Specific part number (leave empty for next)'
+        description: 'Part number (empty = next)'
         required: false
-        type: string
+        default: ''
       test_mode:
-        description: 'Test mode (upload as private)'
+        description: 'Upload as private?'
         required: false
-        default: false
-        type: boolean
+        default: 'false'
 
 jobs:
   generate-and-upload:
@@ -38,25 +37,11 @@ jobs:
       - name: Install Python dependencies
         run: pip install -r requirements.txt
 
-      - name: Setup credentials
-        env:
-          YOUTUBE_CLIENT_SECRETS: ${{ secrets.YOUTUBE_CLIENT_SECRETS }}
-          YOUTUBE_TOKEN: ${{ secrets.YOUTUBE_TOKEN }}
+      - name: Setup YouTube credentials
         run: |
           mkdir -p config
-          echo "$YOUTUBE_CLIENT_SECRETS" > config/client_secrets.json
-          echo "$YOUTUBE_TOKEN" > config/youtube_token.json
-
-      - name: Copy intro video
-        env:
-          INTRO_VIDEO_BASE64: ${{ secrets.INTRO_VIDEO_BASE64 }}
-        run: |
-          if [ -n "$INTRO_VIDEO_BASE64" ]; then
-            echo "$INTRO_VIDEO_BASE64" | base64 -d > assets/intro.mp4
-            echo "Intro video restored"
-          else
-            echo "No intro video secret found, skipping"
-          fi
+          echo '${{ secrets.YOUTUBE_CLIENT_SECRETS }}' > config/client_secrets.json
+          echo '${{ secrets.YOUTUBE_TOKEN }}' > config/youtube_token.json
 
       - name: Generate and upload video
         env:
@@ -65,10 +50,10 @@ jobs:
           YOUTUBE_TOKEN_JSON: ${{ secrets.YOUTUBE_TOKEN }}
         run: |
           ARGS=""
-          if [ -n "${{ inputs.part_number }}" ]; then
-            ARGS="$ARGS --part ${{ inputs.part_number }}"
+          if [ -n "${{ github.event.inputs.part_number }}" ]; then
+            ARGS="$ARGS --part ${{ github.event.inputs.part_number }}"
           fi
-          if [ "${{ inputs.test_mode }}" = "true" ]; then
+          if [ "${{ github.event.inputs.test_mode }}" = "true" ]; then
             ARGS="$ARGS --test"
           fi
           python main.py $ARGS
