@@ -65,8 +65,10 @@ class VideoComposer:
             try:
                 intro_clip = VideoFileClip(self.intro_video_path)
                 # Resize to match our resolution if needed
-                if intro_clip.size != (1280, 720):
-                    intro_clip = intro_clip.resize((1280, 720))
+                target_w = self.config.get("video", {}).get("resolution", {}).get("width", 1920)
+                target_h = self.config.get("video", {}).get("resolution", {}).get("height", 1080)
+                if intro_clip.size != (target_w, target_h):
+                    intro_clip = intro_clip.resize((target_w, target_h))
                 all_clips.append(intro_clip)
                 logger.info(f"Intro video added: {self.intro_video_path} ({intro_clip.duration:.1f}s)")
             except Exception as e:

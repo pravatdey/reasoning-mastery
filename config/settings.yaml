@@ -7,12 +7,12 @@ video:
   duration_min: 12
   duration_max: 15
   resolution:
-    width: 1280
-    height: 720
+    width: 1920
+    height: 1080
   fps: 30
   codec: "libx264"
-  bitrate: "2000k"
-  preset: "ultrafast"
+  bitrate: "4000k"
+  preset: "medium"
 
 llm:
   provider: "groq"

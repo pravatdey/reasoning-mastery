@@ -204,33 +204,33 @@ class SlideRenderer:
 
         # Series name (left) — with accent glow
         draw.text(
-            (Layout.MARGIN_X, 12),
+            (Layout.MARGIN_X, 18),
             "REASONING MASTERY",
             fill=accent_rgb,
-            font=self.font_tiny
+            font=self.font_small
         )
 
         # Part badge (right) — vibrant with glow
         part_text = f"Part {scene.part_number}/{scene.total_parts}"
         badge_font = self.font_badge
         bbox = draw.textbbox((0, 0), part_text, font=badge_font)
-        badge_w = bbox[2] - bbox[0] + 24
+        badge_w = bbox[2] - bbox[0] + 32
         badge_x = self.width - Layout.MARGIN_X - badge_w
-        badge_y = 10
+        badge_y = 14
 
         # Badge glow background
         draw.rounded_rectangle(
-            [badge_x - 2, badge_y - 2, badge_x + badge_w + 2, badge_y + 32],
-            radius=16,
+            [badge_x - 2, badge_y - 2, badge_x + badge_w + 2, badge_y + 40],
+            radius=20,
             fill=(accent_rgb[0] // 4, accent_rgb[1] // 4, accent_rgb[2] // 4)
         )
         draw.rounded_rectangle(
-            [badge_x, badge_y, badge_x + badge_w, badge_y + 28],
-            radius=14,
+            [badge_x, badge_y, badge_x + badge_w, badge_y + 36],
+            radius=18,
             fill=accent_rgb
         )
         draw.text(
-            (badge_x + 12, badge_y + 4),
+            (badge_x + 16, badge_y + 6),
             part_text,
             fill=hex_to_rgb(Colors.WHITE),
             font=badge_font
@@ -257,10 +257,10 @@ class SlideRenderer:
         # Category label (bottom left)
         category_text = scene.topic_category.replace("_", " ").upper()
         draw.text(
-            (Layout.MARGIN_X, Layout.BOTTOM_BAR_Y + 18),
+            (Layout.MARGIN_X, Layout.BOTTOM_BAR_Y + 22),
             category_text,
             fill=accent_rgb,
-            font=self.font_tiny
+            font=self.font_small
         )
 
         # Exam tags (bottom right) — vibrant colored pills
@@ -268,23 +268,22 @@ class SlideRenderer:
         tag_colors = [Colors.VR_ACCENT, Colors.ORANGE, Colors.GREEN, Colors.YELLOW]
         tag_x = self.width - Layout.MARGIN_X
         for tag, tcolor in zip(reversed(exam_tags), reversed(tag_colors)):
-            tag_bbox = draw.textbbox((0, 0), tag, font=self.font_tiny)
-            tw = tag_bbox[2] - tag_bbox[0] + 16
-            tag_x -= tw + 8
+            tag_bbox = draw.textbbox((0, 0), tag, font=self.font_small)
+            tw = tag_bbox[2] - tag_bbox[0] + 24
+            tag_x -= tw + 10
             tc_rgb = hex_to_rgb(tcolor)
-            # Dark bg with colored border
             draw.rounded_rectangle(
-                [tag_x, Layout.BOTTOM_BAR_Y + 14, tag_x + tw, Layout.BOTTOM_BAR_Y + 34],
-                radius=8,
+                [tag_x, Layout.BOTTOM_BAR_Y + 18, tag_x + tw, Layout.BOTTOM_BAR_Y + 48],
+                radius=10,
                 fill=(tc_rgb[0] // 6, tc_rgb[1] // 6, tc_rgb[2] // 6),
                 outline=tc_rgb,
-                width=1
+                width=2
             )
             draw.text(
-                (tag_x + 8, Layout.BOTTOM_BAR_Y + 16),
+                (tag_x + 12, Layout.BOTTOM_BAR_Y + 20),
                 tag,
                 fill=tc_rgb,
-                font=self.font_tiny
+                font=self.font_small
             )
 
         return img, draw

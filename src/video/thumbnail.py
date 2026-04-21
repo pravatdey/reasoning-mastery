@@ -18,8 +18,8 @@ class ThumbnailGenerator:
     """Generates eye-catching YouTube thumbnails."""
 
     def __init__(self):
-        self.width = 1280
-        self.height = 720
+        self.width = 1920
+        self.height = 1080
         self._font_cache = {}
 
     def _get_font(self, font_file: str, size: int) -> ImageFont.FreeTypeFont:
@@ -63,7 +63,7 @@ class ThumbnailGenerator:
         )
 
         # Part number - large, top-left
-        part_font = self._get_font(Fonts.BOLD, 72)
+        part_font = self._get_font(Fonts.BOLD, 96)
         draw.text(
             (60, 40),
             f"Part {topic.part}",
@@ -72,7 +72,7 @@ class ThumbnailGenerator:
         )
 
         # "/200" smaller
-        of_font = self._get_font(Fonts.REGULAR, 36)
+        of_font = self._get_font(Fonts.REGULAR, 48)
         bbox = draw.textbbox((60, 40), f"Part {topic.part}", font=part_font)
         draw.text(
             (bbox[2] + 10, 70),
@@ -82,7 +82,7 @@ class ThumbnailGenerator:
         )
 
         # Topic title - large, centered
-        title_font = self._get_font(Fonts.BOLD, 56)
+        title_font = self._get_font(Fonts.BOLD, 72)
         # Wrap title
         words = topic.title.split()
         lines = []

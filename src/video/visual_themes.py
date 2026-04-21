@@ -63,19 +63,19 @@ class Colors:
 
 
 class Fonts:
-    """Font configuration"""
+    """Font configuration — large readable text for YouTube"""
 
-    # Font sizes
-    TITLE = 42
-    SECTION_LABEL = 24
-    BODY = 28
-    BODY_SMALL = 22
-    FORMULA = 34
-    SMALL = 18
-    TINY = 14
-    OPTION = 24
-    STEP_NUMBER = 20
-    BADGE = 16
+    # Font sizes — optimized for 1280x720 YouTube viewing
+    TITLE = 52
+    SECTION_LABEL = 32
+    BODY = 36
+    BODY_SMALL = 30
+    FORMULA = 42
+    SMALL = 24
+    TINY = 20
+    OPTION = 30
+    STEP_NUMBER = 28
+    BADGE = 20
 
     # Font families (will use system fonts or custom)
     BOLD = "arialbd.ttf"
@@ -84,45 +84,45 @@ class Fonts:
 
 
 class Layout:
-    """Layout constants for 1280x720 video"""
+    """Layout constants for 1920x1080 Full HD video"""
 
     # Video dimensions
-    WIDTH = 1280
-    HEIGHT = 720
+    WIDTH = 1920
+    HEIGHT = 1080
 
     # Margins
-    MARGIN_X = 60
-    MARGIN_Y = 20
-    CONTENT_PADDING = 40
+    MARGIN_X = 90
+    MARGIN_Y = 30
+    CONTENT_PADDING = 50
 
     # Top bar
-    TOP_BAR_HEIGHT = 50
-    PROGRESS_BAR_HEIGHT = 4
+    TOP_BAR_HEIGHT = 70
+    PROGRESS_BAR_HEIGHT = 6
     PROGRESS_BAR_Y = 0
 
     # Content area
-    CONTENT_TOP = 70
-    CONTENT_BOTTOM = 660
+    CONTENT_TOP = 100
+    CONTENT_BOTTOM = 1000
     CONTENT_WIDTH = WIDTH - 2 * MARGIN_X
 
     # Bottom bar
-    BOTTOM_BAR_Y = 665
-    BOTTOM_BAR_HEIGHT = 55
+    BOTTOM_BAR_Y = 1005
+    BOTTOM_BAR_HEIGHT = 75
 
     # Card dimensions
-    CARD_PADDING = 20
-    CARD_RADIUS = 12
+    CARD_PADDING = 28
+    CARD_RADIUS = 16
 
     # Section header
-    SECTION_HEADER_Y = 80
+    SECTION_HEADER_Y = 110
 
     # Formula box
-    FORMULA_BOX_PADDING = 24
-    FORMULA_BOX_MARGIN_Y = 20
+    FORMULA_BOX_PADDING = 32
+    FORMULA_BOX_MARGIN_Y = 24
 
     # Step circle
-    STEP_CIRCLE_RADIUS = 18
+    STEP_CIRCLE_RADIUS = 24
 
     # Option card
-    OPTION_HEIGHT = 50
-    OPTION_GAP = 12
+    OPTION_HEIGHT = 65
+    OPTION_GAP = 16
