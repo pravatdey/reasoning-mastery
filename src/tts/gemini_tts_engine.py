@@ -151,7 +151,7 @@ class GeminiTTSEngine(BaseTTS):
 
         return [c for c in chunks if c]
 
-    def _postprocess_audio(self, audio_path: str, slow_down: float = 0.88) -> None:
+    def _postprocess_audio(self, audio_path: str, slow_down: float = 0.92) -> None:
         """
         Enhance audio for warm, clear educational voice.
         Slows down speech for natural, comfortable listening speed.
