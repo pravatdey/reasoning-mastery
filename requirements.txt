@@ -1,0 +1,28 @@
+# LLM
+groq>=0.4.0
+
+# Text-to-Speech
+edge-tts>=6.1.0
+pydub>=0.25.1
+google-genai>=1.0.0     # Gemini TTS - realistic Hindi voice
+
+# Video Generation
+moviepy==1.0.3
+decorator==4.4.2
+Pillow>=10.0.0
+numpy>=1.24.0
+imageio>=2.31.0
+imageio-ffmpeg>=0.4.8
+
+# YouTube API
+google-api-python-client>=2.100.0
+google-auth-oauthlib>=1.1.0
+google-auth-httplib2>=0.1.1
+
+# Configuration & Utilities
+pyyaml>=6.0
+apscheduler>=3.10.0
+SQLAlchemy>=2.0.0
+loguru>=0.7.0
+python-dotenv>=1.0.0
+pytz>=2023.3

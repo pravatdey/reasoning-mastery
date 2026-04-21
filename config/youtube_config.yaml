@@ -1,0 +1,82 @@
+metadata:
+  title_template: "{category} Part {part}/200 | {topic} | Tips & Tricks | Competitive Exams"
+
+  description_template: |
+    {series_name} - Part {part}/200
+    Topic: {topic}
+    Category: {category}
+
+    In this video, we cover:
+    {topic_summary}
+
+    What you'll learn:
+    - Core concepts and formulas
+    - Step-by-step solved examples
+    - Tips & tricks for competitive exams
+    - Practice questions to test yourself
+
+    This series covers all 200 essential topics in Verbal & Analytical Reasoning for:
+    - UPSC (Civil Services)
+    - SSC (CGL, CHSL, MTS)
+    - Banking (IBPS, SBI, RBI)
+    - RRB (NTPC, Group D)
+    - CAT, MAT, XAT
+    - State PSC exams
+
+    Check the pinned comment for study notes and practice questions!
+
+    #Reasoning #VerbalReasoning #AnalyticalReasoning #CompetitiveExams #SSC #Banking #UPSC #ReasoningTricks #ReasoningMastery
+
+  tags:
+    - "verbal reasoning"
+    - "analytical reasoning"
+    - "reasoning tricks"
+    - "reasoning shortcuts"
+    - "competitive exams"
+    - "SSC reasoning"
+    - "banking reasoning"
+    - "UPSC reasoning"
+    - "RRB reasoning"
+    - "reasoning tips"
+    - "number series"
+    - "coding decoding"
+    - "blood relations"
+    - "syllogism"
+    - "seating arrangement"
+    - "puzzles"
+    - "logical reasoning"
+    - "reasoning mastery"
+    - "reasoning practice"
+    - "reasoning tutorial"
+
+  category_id: "27"
+  default_language: "en"
+  made_for_kids: false
+
+comment:
+  study_notes_template: |
+    📚 STUDY NOTES - Part {part}/200: {topic}
+
+    🔑 KEY CONCEPTS:
+    {key_concepts}
+
+    📐 IMPORTANT FORMULAS:
+    {formulas}
+
+    💡 TIPS & TRICKS:
+    {tips}
+
+    ✅ PRACTICE QUESTIONS (Try before checking answers!):
+    {practice_questions}
+
+    Like this video and subscribe for daily reasoning lessons!
+
+  answer_key_template: |
+    🔓 ANSWER KEY - Part {part}:
+    {answers}
+
+    How many did you get right? Comment below! 👇
+
+playlist:
+  title: "Reasoning Mastery - Complete 200 Parts Series"
+  description: "Master Verbal & Analytical Reasoning for all competitive exams. 200 comprehensive video lessons covering every topic with formulas, solved examples, tips & tricks, and practice questions. One new video daily!"

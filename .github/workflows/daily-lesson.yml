@@ -1,0 +1,86 @@
+name: Daily Reasoning Video - Auto Upload
+
+on:
+  schedule:
+    - cron: '30 0 * * *'  # 6:00 AM IST daily
+  workflow_dispatch:
+    inputs:
+      part_number:
+        description: 'Specific part number (leave empty for next)'
+        required: false
+        type: string
+      test_mode:
+        description: 'Test mode (upload as private)'
+        required: false
+        default: false
+        type: boolean
+
+jobs:
+  generate-and-upload:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install system dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg
+
+      - name: Install Python dependencies
+        run: pip install -r requirements.txt
+
+      - name: Setup credentials
+        env:
+          YOUTUBE_CLIENT_SECRETS: ${{ secrets.YOUTUBE_CLIENT_SECRETS }}
+          YOUTUBE_TOKEN: ${{ secrets.YOUTUBE_TOKEN }}
+        run: |
+          mkdir -p config
+          echo "$YOUTUBE_CLIENT_SECRETS" > config/client_secrets.json
+          echo "$YOUTUBE_TOKEN" > config/youtube_token.json
+
+      - name: Copy intro video
+        env:
+          INTRO_VIDEO_BASE64: ${{ secrets.INTRO_VIDEO_BASE64 }}
+        run: |
+          if [ -n "$INTRO_VIDEO_BASE64" ]; then
+            echo "$INTRO_VIDEO_BASE64" | base64 -d > assets/intro.mp4
+            echo "Intro video restored"
+          else
+            echo "No intro video secret found, skipping"
+          fi
+
+      - name: Generate and upload video
+        env:
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          YOUTUBE_TOKEN_JSON: ${{ secrets.YOUTUBE_TOKEN }}
+        run: |
+          ARGS=""
+          if [ -n "${{ inputs.part_number }}" ]; then
+            ARGS="$ARGS --part ${{ inputs.part_number }}"
+          fi
+          if [ "${{ inputs.test_mode }}" = "true" ]; then
+            ARGS="$ARGS --test"
+          fi
+          python main.py $ARGS
+
+      - name: Upload artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: video-output-${{ github.run_number }}
+          path: |
+            output/videos/
+            output/thumbnails/
+            output/scripts/
+            logs/
+          retention-days: 7

@@ -1,0 +1,106 @@
+app:
+  name: "Reasoning Mastery"
+  version: "1.0.0"
+  description: "Verbal & Analytical Reasoning for Competitive Exams"
+
+video:
+  duration_min: 12
+  duration_max: 15
+  resolution:
+    width: 1280
+    height: 720
+  fps: 30
+  codec: "libx264"
+  bitrate: "2000k"
+  preset: "ultrafast"
+
+llm:
+  provider: "groq"
+  groq:
+    model: "llama-3.3-70b-versatile"
+    temperature: 0.7
+    max_tokens: 8000
+
+tts:
+  provider: "gemini"    # "gemini" = realistic Hindi voice (FREE) | "edge" = fallback
+  gemini:
+    default_language: "hi"    # Hindi - realistic, attractive voice
+    voice_name: "Charon"      # Deep, authoritative male — best for Hindi teaching
+    # Other voices: Fenrir (confident), Puck (energetic), Kore (calm female),
+    #               Zephyr (warm female), Orus (professional male)
+    timeout: 120
+  edge:
+    voice: "en-IN-PrabhatNeural"   # Fallback if Gemini fails
+    rate: "-5%"
+    pitch: "-3Hz"
+    volume: "+0%"
+
+composition:
+  # Local path (for your machine) — GitHub Actions uses assets/intro.mp4
+  intro_video: "assets/intro.mp4"
+
+  background:
+    color: "#0B0E17"
+    pattern: "assets/backgrounds/dark_grid.png"
+
+  theme:
+    verbal_reasoning:
+      accent: "#00B4FF"
+      secondary: "#0088CC"
+      gradient_start: "#001a33"
+      gradient_end: "#0B0E17"
+    analytical_reasoning:
+      accent: "#9B59FF"
+      secondary: "#7B2FCC"
+      gradient_start: "#1a0033"
+      gradient_end: "#0B0E17"
+
+  fonts:
+    title_size: 42
+    section_label_size: 24
+    body_size: 28
+    formula_size: 34
+    small_size: 18
+
+  progress_bar:
+    enabled: true
+    height: 4
+    color_complete: "#00B4FF"
+    color_remaining: "#1A1E2E"
+
+  music:
+    enabled: true
+    file: "assets/music/study_ambient.mp3"
+    volume: 0.08
+
+  intro:
+    duration: 4
+    animation: "fade"
+
+  outro:
+    duration: 5
+    text: "Subscribe for daily reasoning lessons!"
+
+syllabus:
+  file: "config/syllabus.yaml"
+  total_parts: 200
+
+youtube:
+  category_id: "27"
+  privacy_status: "public"
+  playlist_title: "Reasoning Mastery - Complete 200 Parts Series"
+  playlist_description: "Master Verbal & Analytical Reasoning for UPSC, SSC, Banking, RRB and all competitive exams. 200 comprehensive lessons covering every topic with formulas, tricks, solved examples, and practice questions."
+
+schedule:
+  enabled: true
+  time: "06:00"
+  timezone: "Asia/Kolkata"
+
+database:
+  path: "data/reasoning_tracker.db"
+
+output:
+  audio_dir: "output/audio"
+  video_dir: "output/videos"
+  thumbnail_dir: "output/thumbnails"
+  script_dir: "output/scripts"

@@ -1,0 +1,1593 @@
+syllabus:
+  name: "Verbal & Analytical Reasoning for Competitive Exams"
+  total_parts: 200
+
+  sections:
+    # ============================================================
+    # VERBAL REASONING (Parts 1-100)
+    # ============================================================
+    - name: "Number Series"
+      category: "verbal_reasoning"
+      topics:
+        - part: 1
+          title: "Number Series - Basics & Patterns"
+          subtopics: ["Ascending/Descending", "Arithmetic Progression", "Common difference"]
+          difficulty: "beginner"
+          formulas: ["a_n = a_1 + (n-1)d", "S_n = n/2 × (2a + (n-1)d)"]
+          duration_target_minutes: 8
+
+        - part: 2
+          title: "Number Series - Geometric & Mixed Patterns"
+          subtopics: ["Geometric Progression", "Mixed series", "Alternating patterns"]
+          difficulty: "beginner"
+          formulas: ["a_n = a_1 × r^(n-1)", "S_n = a(r^n - 1)/(r - 1)"]
+          duration_target_minutes: 8
+
+        - part: 3
+          title: "Number Series - Square & Cube Based"
+          subtopics: ["Perfect squares", "Perfect cubes", "Square root patterns"]
+          difficulty: "intermediate"
+          formulas: ["n² series", "n³ series", "n² ± k patterns"]
+          duration_target_minutes: 8
+
+        - part: 4
+          title: "Number Series - Fibonacci & Special Sequences"
+          subtopics: ["Fibonacci series", "Triangular numbers", "Prime number series"]
+          difficulty: "intermediate"
+          formulas: ["F(n) = F(n-1) + F(n-2)", "T_n = n(n+1)/2"]
+          duration_target_minutes: 8
+
+        - part: 5
+          title: "Number Series - Two-Tier & Complex Patterns"
+          subtopics: ["Difference of differences", "Product-based series", "Nested operations"]
+          difficulty: "advanced"
+          formulas: ["Second-order differences", "Multiplicative patterns"]
+          duration_target_minutes: 10
+
+        - part: 6
+          title: "Number Series - Wrong Number Detection"
+          subtopics: ["Finding odd one out", "Error identification", "Pattern verification"]
+          difficulty: "advanced"
+          formulas: ["Pattern consistency check methods"]
+          duration_target_minutes: 8
+
+    - name: "Letter & Alpha-Numeric Series"
+      category: "verbal_reasoning"
+      topics:
+        - part: 7
+          title: "Letter Series - Basic Patterns"
+          subtopics: ["Alphabetical position", "Forward/backward skip", "Vowel-consonant patterns"]
+          difficulty: "beginner"
+          formulas: ["A=1, B=2, ..., Z=26", "Position arithmetic"]
+          duration_target_minutes: 8
+
+        - part: 8
+          title: "Letter Series - Advanced Patterns"
+          subtopics: ["Reverse alphabet coding", "Multiple letter shifts", "Cyclic patterns"]
+          difficulty: "intermediate"
+          formulas: ["Reverse position: 27-n", "Modular arithmetic for letters"]
+          duration_target_minutes: 8
+
+        - part: 9
+          title: "Alpha-Numeric Series"
+          subtopics: ["Combined letter-number patterns", "Position-value mapping", "Mixed sequences"]
+          difficulty: "intermediate"
+          formulas: ["Letter-number conversion formulas"]
+          duration_target_minutes: 8
+
+    - name: "Coding-Decoding"
+      category: "verbal_reasoning"
+      topics:
+        - part: 10
+          title: "Coding-Decoding - Letter Shifting"
+          subtopics: ["Simple shift codes", "Position-based coding", "Forward/backward shifts"]
+          difficulty: "beginner"
+          formulas: ["Shift = Coded - Original position"]
+          duration_target_minutes: 8
+
+        - part: 11
+          title: "Coding-Decoding - Number Coding"
+          subtopics: ["Letter to number codes", "Reverse coding", "Mathematical operation codes"]
+          difficulty: "beginner"
+          formulas: ["Position values", "Arithmetic operations on codes"]
+          duration_target_minutes: 8
+
+        - part: 12
+          title: "Coding-Decoding - Symbol & Mixed Coding"
+          subtopics: ["Symbol substitution", "Conditional coding rules", "Multiple rule systems"]
+          difficulty: "intermediate"
+          formulas: ["Rule identification technique"]
+          duration_target_minutes: 8
+
+        - part: 13
+          title: "Coding-Decoding - Sentence & Word Coding"
+          subtopics: ["Word-level coding", "Sentence comparison method", "Code elimination"]
+          difficulty: "intermediate"
+          formulas: ["Comparison matrix method"]
+          duration_target_minutes: 8
+
+        - part: 14
+          title: "Coding-Decoding - Advanced & New Pattern"
+          subtopics: ["Binary coding", "Ternary coding", "Matrix-based coding"]
+          difficulty: "advanced"
+          formulas: ["Binary conversion", "Matrix operations"]
+          duration_target_minutes: 10
+
+    - name: "Analogy"
+      category: "verbal_reasoning"
+      topics:
+        - part: 15
+          title: "Analogy - Number Analogy"
+          subtopics: ["Square/cube relationships", "Ratio-based", "Operation-based analogies"]
+          difficulty: "beginner"
+          formulas: ["Common number relationships"]
+          duration_target_minutes: 8
+
+        - part: 16
+          title: "Analogy - Letter Analogy"
+          subtopics: ["Position-based letter pairs", "Reverse pairs", "Skip patterns"]
+          difficulty: "beginner"
+          formulas: ["Opposite letter pairs: A-Z, B-Y, etc."]
+          duration_target_minutes: 8
+
+        - part: 17
+          title: "Analogy - Word Analogy"
+          subtopics: ["Synonym/Antonym pairs", "Cause-Effect", "Part-Whole relationships"]
+          difficulty: "intermediate"
+          formulas: ["Relationship identification framework"]
+          duration_target_minutes: 8
+
+        - part: 18
+          title: "Analogy - Mixed & Advanced"
+          subtopics: ["Multi-step analogies", "Complex relationships", "Practice problems"]
+          difficulty: "advanced"
+          formulas: ["Multi-layer analogy solving"]
+          duration_target_minutes: 8
+
+    - name: "Classification (Odd One Out)"
+      category: "verbal_reasoning"
+      topics:
+        - part: 19
+          title: "Classification - Number Classification"
+          subtopics: ["Prime vs composite", "Even/Odd grouping", "Mathematical property"]
+          difficulty: "beginner"
+          formulas: ["Number properties", "Divisibility rules"]
+          duration_target_minutes: 8
+
+        - part: 20
+          title: "Classification - Letter & Word Classification"
+          subtopics: ["Vowel/consonant groups", "Semantic categories", "Position-based groups"]
+          difficulty: "beginner"
+          formulas: ["Category identification"]
+          duration_target_minutes: 8
+
+        - part: 21
+          title: "Classification - Advanced & Mixed"
+          subtopics: ["Multi-criteria classification", "Hidden patterns", "Complex groupings"]
+          difficulty: "intermediate"
+          formulas: ["Multi-attribute analysis"]
+          duration_target_minutes: 8
+
+    - name: "Blood Relations"
+      category: "verbal_reasoning"
+      topics:
+        - part: 22
+          title: "Blood Relations - Basic Relationships"
+          subtopics: ["Parent-child", "Sibling relations", "Spouse relations", "Family tree basics"]
+          difficulty: "beginner"
+          formulas: ["Relationship mapping chart"]
+          duration_target_minutes: 8
+
+        - part: 23
+          title: "Blood Relations - Complex Problems"
+          subtopics: ["Multi-generation problems", "Coded relationships", "Mixed gender puzzles"]
+          difficulty: "intermediate"
+          formulas: ["Generation counting method"]
+          duration_target_minutes: 8
+
+        - part: 24
+          title: "Blood Relations - Coded & Symbolic"
+          subtopics: ["Symbol-based relations", "Operator-based coding", "Complex coded problems"]
+          difficulty: "advanced"
+          formulas: ["Symbol decoding technique"]
+          duration_target_minutes: 10
+
+        - part: 25
+          title: "Blood Relations - Family Tree & Advanced"
+          subtopics: ["Complete family tree construction", "Multiple families", "Practice problems"]
+          difficulty: "advanced"
+          formulas: ["Tree construction method"]
+          duration_target_minutes: 10
+
+    - name: "Direction Sense"
+      category: "verbal_reasoning"
+      topics:
+        - part: 26
+          title: "Direction Sense - Basic Concepts"
+          subtopics: ["Cardinal directions", "Left/Right turns", "Distance calculation"]
+          difficulty: "beginner"
+          formulas: ["Pythagoras theorem for distance", "Direction after turns"]
+          duration_target_minutes: 8
+
+        - part: 27
+          title: "Direction Sense - Shadow & Clock Problems"
+          subtopics: ["Shadow direction by time", "Sun position", "Clock-based direction"]
+          difficulty: "intermediate"
+          formulas: ["Shadow rules: morning=West, evening=East"]
+          duration_target_minutes: 8
+
+        - part: 28
+          title: "Direction Sense - Complex Navigation"
+          subtopics: ["Multiple turns", "Shortest distance", "Displacement problems"]
+          difficulty: "intermediate"
+          formulas: ["Net displacement = √(x² + y²)"]
+          duration_target_minutes: 8
+
+        - part: 29
+          title: "Direction Sense - Advanced Problems"
+          subtopics: ["Relative positions", "Map-based problems", "Combined problems"]
+          difficulty: "advanced"
+          formulas: ["Coordinate geometry application"]
+          duration_target_minutes: 10
+
+    - name: "Ranking & Order"
+      category: "verbal_reasoning"
+      topics:
+        - part: 30
+          title: "Ranking & Order - Linear Arrangement"
+          subtopics: ["Position from left/right", "Total count formulas", "Between positions"]
+          difficulty: "beginner"
+          formulas: ["Total = Left + Right - 1", "Between = |Pos1 - Pos2| - 1"]
+          duration_target_minutes: 8
+
+        - part: 31
+          title: "Ranking & Order - Comparison Based"
+          subtopics: ["Height/weight ranking", "Score-based ordering", "Insufficient data"]
+          difficulty: "intermediate"
+          formulas: ["Minimum/Maximum position calculation"]
+          duration_target_minutes: 8
+
+        - part: 32
+          title: "Ranking & Order - Advanced Problems"
+          subtopics: ["Row/column-based ranking", "Interchange positions", "Complex ordering"]
+          difficulty: "advanced"
+          formulas: ["Matrix position formulas"]
+          duration_target_minutes: 8
+
+    - name: "Sitting Arrangement (Linear)"
+      category: "verbal_reasoning"
+      topics:
+        - part: 33
+          title: "Linear Arrangement - Single Row Basics"
+          subtopics: ["Facing same direction", "Position fixing", "Neighbor conditions"]
+          difficulty: "beginner"
+          formulas: ["n! arrangements", "Constraint-based elimination"]
+          duration_target_minutes: 8
+
+        - part: 34
+          title: "Linear Arrangement - Two Row Facing"
+          subtopics: ["Two parallel rows", "Facing each other", "Opposite person identification"]
+          difficulty: "intermediate"
+          formulas: ["Mirror position mapping"]
+          duration_target_minutes: 10
+
+        - part: 35
+          title: "Linear Arrangement - Advanced Problems"
+          subtopics: ["Multiple conditions", "Minimum/maximum gaps", "Practice problems"]
+          difficulty: "advanced"
+          formulas: ["Elimination technique"]
+          duration_target_minutes: 10
+
+    - name: "Sitting Arrangement (Circular)"
+      category: "verbal_reasoning"
+      topics:
+        - part: 36
+          title: "Circular Arrangement - Basics"
+          subtopics: ["Clockwise/anticlockwise", "Facing center/outside", "Adjacent positions"]
+          difficulty: "beginner"
+          formulas: ["(n-1)! circular arrangements"]
+          duration_target_minutes: 8
+
+        - part: 37
+          title: "Circular Arrangement - Facing In/Out"
+          subtopics: ["Mixed facing direction", "Left/right in circular", "Position identification"]
+          difficulty: "intermediate"
+          formulas: ["Circular left-right rules"]
+          duration_target_minutes: 10
+
+        - part: 38
+          title: "Circular Arrangement - Advanced Problems"
+          subtopics: ["Complex multi-condition", "Combined linear-circular", "Practice problems"]
+          difficulty: "advanced"
+          formulas: ["Systematic elimination"]
+          duration_target_minutes: 10
+
+    - name: "Syllogism"
+      category: "verbal_reasoning"
+      topics:
+        - part: 39
+          title: "Syllogism - Venn Diagram Method"
+          subtopics: ["All, Some, No statements", "Drawing Venn diagrams", "Valid conclusions"]
+          difficulty: "beginner"
+          formulas: ["All A are B → A ⊂ B", "Some A are B → A ∩ B ≠ ∅", "No A is B → A ∩ B = ∅"]
+          duration_target_minutes: 8
+
+        - part: 40
+          title: "Syllogism - Two Statement Problems"
+          subtopics: ["Positive conclusions", "Negative conclusions", "Possibility cases"]
+          difficulty: "beginner"
+          formulas: ["Conclusion validity rules"]
+          duration_target_minutes: 8
+
+        - part: 41
+          title: "Syllogism - Either-Or & Complementary"
+          subtopics: ["Either-or conclusions", "Complementary pairs", "Universal-particular pairs"]
+          difficulty: "intermediate"
+          formulas: ["Complementary pair: All A are B + Some A are not B"]
+          duration_target_minutes: 8
+
+        - part: 42
+          title: "Syllogism - Three+ Statements"
+          subtopics: ["Multiple statements", "Chain conclusions", "Complex problems"]
+          difficulty: "intermediate"
+          formulas: ["Chain rule: All A=B, All B=C → All A=C"]
+          duration_target_minutes: 10
+
+        - part: 43
+          title: "Syllogism - Possibility Based"
+          subtopics: ["'Can be' conclusions", "Reverse possibility", "Definite vs possible"]
+          difficulty: "advanced"
+          formulas: ["Possibility rules"]
+          duration_target_minutes: 10
+
+        - part: 44
+          title: "Syllogism - Advanced & Negative Statements"
+          subtopics: ["Only, Only a few, At least", "Negative premises", "Practice problems"]
+          difficulty: "advanced"
+          formulas: ["Modern syllogism patterns"]
+          duration_target_minutes: 10
+
+    - name: "Statement & Assumptions"
+      category: "verbal_reasoning"
+      topics:
+        - part: 45
+          title: "Statement & Assumptions - Basics"
+          subtopics: ["What is an assumption", "Implicit vs explicit", "Common assumption types"]
+          difficulty: "beginner"
+          formulas: ["Assumption identification framework"]
+          duration_target_minutes: 8
+
+        - part: 46
+          title: "Statement & Assumptions - Practice"
+          subtopics: ["Advertisement-based", "Policy-based", "Advice-based statements"]
+          difficulty: "intermediate"
+          formulas: ["Category-based approach"]
+          duration_target_minutes: 8
+
+    - name: "Statement & Conclusions"
+      category: "verbal_reasoning"
+      topics:
+        - part: 47
+          title: "Statement & Conclusions - Basics"
+          subtopics: ["Logical deduction", "Over-generalization trap", "Scope of conclusion"]
+          difficulty: "beginner"
+          formulas: ["Conclusion validity test"]
+          duration_target_minutes: 8
+
+        - part: 48
+          title: "Statement & Conclusions - Advanced"
+          subtopics: ["Multiple conclusions", "Definite vs probable", "Practice problems"]
+          difficulty: "intermediate"
+          formulas: ["Strength of conclusion analysis"]
+          duration_target_minutes: 8
+
+    - name: "Statement & Course of Action"
+      category: "verbal_reasoning"
+      topics:
+        - part: 49
+          title: "Statement & Course of Action"
+          subtopics: ["Practicality test", "Root cause addressing", "Extreme actions"]
+          difficulty: "intermediate"
+          formulas: ["Action validity framework"]
+          duration_target_minutes: 8
+
+    - name: "Statement & Arguments"
+      category: "verbal_reasoning"
+      topics:
+        - part: 50
+          title: "Statement & Arguments - Strong vs Weak"
+          subtopics: ["Strong argument criteria", "Weak argument identification", "Relevance test"]
+          difficulty: "intermediate"
+          formulas: ["Argument strength evaluation"]
+          duration_target_minutes: 8
+
+    - name: "Cause & Effect"
+      category: "verbal_reasoning"
+      topics:
+        - part: 51
+          title: "Cause & Effect Reasoning"
+          subtopics: ["Identifying cause", "Identifying effect", "Independent events", "Common cause"]
+          difficulty: "intermediate"
+          formulas: ["Temporal and logical relationship test"]
+          duration_target_minutes: 8
+
+    - name: "Logical Venn Diagrams"
+      category: "verbal_reasoning"
+      topics:
+        - part: 52
+          title: "Logical Venn Diagrams - Basics"
+          subtopics: ["Two-set diagrams", "Subset relationships", "Disjoint sets"]
+          difficulty: "beginner"
+          formulas: ["A ∩ B, A ∪ B, A - B"]
+          duration_target_minutes: 8
+
+        - part: 53
+          title: "Logical Venn Diagrams - Three Sets"
+          subtopics: ["Three-circle diagrams", "Region identification", "Complex relationships"]
+          difficulty: "intermediate"
+          formulas: ["n(A ∪ B ∪ C) = n(A) + n(B) + n(C) - n(A∩B) - n(B∩C) - n(A∩C) + n(A∩B∩C)"]
+          duration_target_minutes: 8
+
+    - name: "Mathematical Operations & Inequalities"
+      category: "verbal_reasoning"
+      topics:
+        - part: 54
+          title: "Mathematical Operations - Symbol Substitution"
+          subtopics: ["BODMAS with swapped symbols", "Priority rules", "Equation solving"]
+          difficulty: "beginner"
+          formulas: ["BODMAS rule", "Symbol swap technique"]
+          duration_target_minutes: 8
+
+        - part: 55
+          title: "Inequalities - Direct & Coded"
+          subtopics: ["Greater/Less than chains", "Coded symbols", "Conclusion derivation"]
+          difficulty: "beginner"
+          formulas: ["Transitive property: A > B, B > C → A > C"]
+          duration_target_minutes: 8
+
+        - part: 56
+          title: "Inequalities - Advanced & Either-Or"
+          subtopics: ["Either-or in inequalities", "Combined coded inequalities", "Practice"]
+          difficulty: "intermediate"
+          formulas: ["Complementary inequality pairs"]
+          duration_target_minutes: 8
+
+    - name: "Input-Output"
+      category: "verbal_reasoning"
+      topics:
+        - part: 57
+          title: "Input-Output - Shifting Based"
+          subtopics: ["Word/number arrangement", "Step-by-step tracing", "Pattern identification"]
+          difficulty: "intermediate"
+          formulas: ["Step tracking method"]
+          duration_target_minutes: 8
+
+        - part: 58
+          title: "Input-Output - Operation Based"
+          subtopics: ["Mathematical operation at each step", "Sorting-based", "Complex rules"]
+          difficulty: "advanced"
+          formulas: ["Operation sequence identification"]
+          duration_target_minutes: 10
+
+    - name: "Data Sufficiency"
+      category: "verbal_reasoning"
+      topics:
+        - part: 59
+          title: "Data Sufficiency - Basics"
+          subtopics: ["Understanding question format", "Statement analysis", "Alone vs together"]
+          difficulty: "beginner"
+          formulas: ["5 standard answer choices"]
+          duration_target_minutes: 8
+
+        - part: 60
+          title: "Data Sufficiency - Advanced"
+          subtopics: ["Mathematical DS", "Logical DS", "Combined problems"]
+          difficulty: "intermediate"
+          formulas: ["Sufficiency testing technique"]
+          duration_target_minutes: 10
+
+    - name: "Puzzle - Days & Months"
+      category: "verbal_reasoning"
+      topics:
+        - part: 61
+          title: "Scheduling Puzzles - Days of Week"
+          subtopics: ["Day assignment", "Order constraints", "Gap conditions"]
+          difficulty: "intermediate"
+          formulas: ["Day numbering: Mon=1, Sun=7"]
+          duration_target_minutes: 10
+
+        - part: 62
+          title: "Scheduling Puzzles - Months & Dates"
+          subtopics: ["Month assignment", "Date-based puzzles", "Combined conditions"]
+          difficulty: "intermediate"
+          formulas: ["Month ordering technique"]
+          duration_target_minutes: 10
+
+    - name: "Puzzle - Floor Based"
+      category: "verbal_reasoning"
+      topics:
+        - part: 63
+          title: "Floor Puzzle - Single Variable"
+          subtopics: ["Person-floor mapping", "Above/below conditions", "Gap constraints"]
+          difficulty: "intermediate"
+          formulas: ["Floor numbering convention"]
+          duration_target_minutes: 10
+
+        - part: 64
+          title: "Floor Puzzle - Double Variable"
+          subtopics: ["Person + attribute on floors", "Multiple constraints", "Practice problems"]
+          difficulty: "advanced"
+          formulas: ["Matrix-based solving"]
+          duration_target_minutes: 10
+
+    - name: "Puzzle - Box & Container"
+      category: "verbal_reasoning"
+      topics:
+        - part: 65
+          title: "Box Puzzle - Stacking"
+          subtopics: ["Box ordering", "Weight/size conditions", "Relative positions"]
+          difficulty: "intermediate"
+          formulas: ["Stack ordering technique"]
+          duration_target_minutes: 10
+
+        - part: 66
+          title: "Box Puzzle - Multi-Attribute"
+          subtopics: ["Color + Size + Position", "Complex conditions", "Practice problems"]
+          difficulty: "advanced"
+          formulas: ["Multi-variable matrix"]
+          duration_target_minutes: 10
+
+    - name: "Puzzle - Comparison & Distribution"
+      category: "verbal_reasoning"
+      topics:
+        - part: 67
+          title: "Comparison Puzzles"
+          subtopics: ["Height/Weight/Age comparison", "Ranking from clues", "Partial information"]
+          difficulty: "intermediate"
+          formulas: ["Comparison chain building"]
+          duration_target_minutes: 8
+
+        - part: 68
+          title: "Distribution Puzzles"
+          subtopics: ["Item distribution among people", "Quantity constraints", "Practice problems"]
+          difficulty: "intermediate"
+          formulas: ["Distribution matrix method"]
+          duration_target_minutes: 10
+
+    - name: "Alphabet & Word Test"
+      category: "verbal_reasoning"
+      topics:
+        - part: 69
+          title: "Alphabet Test"
+          subtopics: ["Left/right position", "Rearrangement", "Between positions"]
+          difficulty: "beginner"
+          formulas: ["Position from right = 27 - Position from left"]
+          duration_target_minutes: 8
+
+        - part: 70
+          title: "Word Formation & Arrangement"
+          subtopics: ["Meaningful words from letters", "Dictionary order", "Word puzzles"]
+          difficulty: "intermediate"
+          formulas: ["Alphabetical ordering rules"]
+          duration_target_minutes: 8
+
+    - name: "Mirror & Water Image"
+      category: "verbal_reasoning"
+      topics:
+        - part: 71
+          title: "Mirror Image"
+          subtopics: ["Letter mirror images", "Number mirror images", "Clock mirror images"]
+          difficulty: "beginner"
+          formulas: ["Left-right reversal rule"]
+          duration_target_minutes: 8
+
+        - part: 72
+          title: "Water Image"
+          subtopics: ["Top-bottom reversal", "Combined transformations", "Practice problems"]
+          difficulty: "beginner"
+          formulas: ["Up-down flip rule"]
+          duration_target_minutes: 8
+
+    - name: "Paper Cutting & Folding"
+      category: "verbal_reasoning"
+      topics:
+        - part: 73
+          title: "Paper Folding & Cutting"
+          subtopics: ["Fold patterns", "Cut symmetry", "Unfolded result prediction"]
+          difficulty: "intermediate"
+          formulas: ["Symmetry axis counting"]
+          duration_target_minutes: 8
+
+        - part: 74
+          title: "Paper Folding - Advanced"
+          subtopics: ["Multiple folds", "Complex cuts", "Hole counting"]
+          difficulty: "advanced"
+          formulas: ["Holes = 2^n × cuts (n = number of folds)"]
+          duration_target_minutes: 10
+
+    - name: "Dice & Cube"
+      category: "verbal_reasoning"
+      topics:
+        - part: 75
+          title: "Dice - Standard & Non-Standard"
+          subtopics: ["Standard dice rules", "Opposite face identification", "Adjacent faces"]
+          difficulty: "beginner"
+          formulas: ["Opposite faces sum = 7 (standard)", "Clockwise rule"]
+          duration_target_minutes: 8
+
+        - part: 76
+          title: "Dice - Multiple Dice & Open Dice"
+          subtopics: ["Two dice comparison", "Open dice folding", "Practice problems"]
+          difficulty: "intermediate"
+          formulas: ["Open dice folding technique"]
+          duration_target_minutes: 8
+
+        - part: 77
+          title: "Cube - Cutting & Painting"
+          subtopics: ["Cube cutting formula", "Painted faces counting", "Corner/Edge/Face pieces"]
+          difficulty: "intermediate"
+          formulas: ["Total pieces = n³", "3-face painted = 8", "2-face = 12(n-2)", "1-face = 6(n-2)²", "0-face = (n-2)³"]
+          duration_target_minutes: 10
+
+    - name: "Counting Figures"
+      category: "verbal_reasoning"
+      topics:
+        - part: 78
+          title: "Counting Triangles"
+          subtopics: ["Triangle counting in figures", "Systematic counting", "Formula methods"]
+          difficulty: "intermediate"
+          formulas: ["Triangle counting formulas for standard figures"]
+          duration_target_minutes: 8
+
+        - part: 79
+          title: "Counting Squares, Rectangles & Lines"
+          subtopics: ["Square counting", "Rectangle counting", "Line segment counting"]
+          difficulty: "intermediate"
+          formulas: ["Squares in n×n grid = Σk²", "Rectangles = C(m+1,2) × C(n+1,2)"]
+          duration_target_minutes: 8
+
+    - name: "Figure Pattern & Completion"
+      category: "verbal_reasoning"
+      topics:
+        - part: 80
+          title: "Figure Series Completion"
+          subtopics: ["Rotation patterns", "Shading patterns", "Element addition/removal"]
+          difficulty: "intermediate"
+          formulas: ["Common rotation angles: 45°, 90°, 180°"]
+          duration_target_minutes: 8
+
+        - part: 81
+          title: "Embedded & Hidden Figures"
+          subtopics: ["Finding hidden shapes", "Figure embedding", "Complex figures"]
+          difficulty: "intermediate"
+          formulas: ["Shape identification technique"]
+          duration_target_minutes: 8
+
+    - name: "Clock & Calendar"
+      category: "verbal_reasoning"
+      topics:
+        - part: 82
+          title: "Clock - Angle Problems"
+          subtopics: ["Hour-minute hand angle", "Meeting/overlap times", "Mirror reflection time"]
+          difficulty: "intermediate"
+          formulas: ["Angle = |30H - 5.5M|", "Hands meet every 65.45 min", "Mirror time = 11:60 - actual"]
+          duration_target_minutes: 8
+
+        - part: 83
+          title: "Clock - Faulty Clock Problems"
+          subtopics: ["Gaining/losing time", "Correct time calculation", "Relative speed"]
+          difficulty: "advanced"
+          formulas: ["Gain/Loss per hour calculation"]
+          duration_target_minutes: 8
+
+        - part: 84
+          title: "Calendar - Day Finding"
+          subtopics: ["Odd days concept", "Leap year rules", "Day of any date"]
+          difficulty: "beginner"
+          formulas: ["Odd days: 1 ordinary year=1, 1 leap year=2", "400 years = 0 odd days"]
+          duration_target_minutes: 8
+
+        - part: 85
+          title: "Calendar - Advanced Problems"
+          subtopics: ["Same calendar year", "Day after N days", "Practice problems"]
+          difficulty: "intermediate"
+          formulas: ["Same calendar repeats: 6-11-11 or 5-6-11 pattern"]
+          duration_target_minutes: 8
+
+    - name: "Coding in a Fictitious Language"
+      category: "verbal_reasoning"
+      topics:
+        - part: 86
+          title: "Fictitious Language Coding"
+          subtopics: ["Sentence-based codes", "Word mapping", "Grammar rules"]
+          difficulty: "intermediate"
+          formulas: ["Word-code mapping matrix"]
+          duration_target_minutes: 8
+
+    - name: "Order & Ranking (Advanced)"
+      category: "verbal_reasoning"
+      topics:
+        - part: 87
+          title: "Conditional Arrangement"
+          subtopics: ["If-then conditions", "Variable positioning", "Practice problems"]
+          difficulty: "advanced"
+          formulas: ["Condition tree method"]
+          duration_target_minutes: 10
+
+    - name: "Logical Sequence of Words"
+      category: "verbal_reasoning"
+      topics:
+        - part: 88
+          title: "Logical Sequence of Words"
+          subtopics: ["Process ordering", "Hierarchy arrangement", "Size/Time ordering"]
+          difficulty: "beginner"
+          formulas: ["Sequential logic identification"]
+          duration_target_minutes: 8
+
+    - name: "Assertion & Reason"
+      category: "verbal_reasoning"
+      topics:
+        - part: 89
+          title: "Assertion & Reason"
+          subtopics: ["Both true & reason explains", "Both true but independent", "One false"]
+          difficulty: "intermediate"
+          formulas: ["4 standard answer patterns"]
+          duration_target_minutes: 8
+
+    - name: "Verbal Reasoning Practice Sets"
+      category: "verbal_reasoning"
+      topics:
+        - part: 90
+          title: "Verbal Reasoning - Practice Set 1 (Number Series & Coding)"
+          subtopics: ["Mixed problems", "Time-bound practice", "Exam simulation"]
+          difficulty: "intermediate"
+          formulas: ["Quick solving techniques"]
+          duration_target_minutes: 10
+
+        - part: 91
+          title: "Verbal Reasoning - Practice Set 2 (Blood Relations & Direction)"
+          subtopics: ["Mixed problems", "Shortcut methods", "Common traps"]
+          difficulty: "intermediate"
+          formulas: ["Error avoidance tips"]
+          duration_target_minutes: 10
+
+        - part: 92
+          title: "Verbal Reasoning - Practice Set 3 (Syllogism & Statements)"
+          subtopics: ["Mixed problems", "Speed techniques", "High-yield topics"]
+          difficulty: "intermediate"
+          formulas: ["Quick conclusion verification"]
+          duration_target_minutes: 10
+
+        - part: 93
+          title: "Verbal Reasoning - Practice Set 4 (Arrangement & Puzzles)"
+          subtopics: ["Mixed problems", "Time management", "Priority solving"]
+          difficulty: "advanced"
+          formulas: ["Puzzle solving framework"]
+          duration_target_minutes: 10
+
+        - part: 94
+          title: "Verbal Reasoning - Practice Set 5 (Comprehensive)"
+          subtopics: ["All topics mixed", "Exam pattern questions", "Performance analysis"]
+          difficulty: "advanced"
+          formulas: ["Overall strategy"]
+          duration_target_minutes: 10
+
+        - part: 95
+          title: "Verbal Reasoning - Previous Year SSC Questions"
+          subtopics: ["SSC CGL patterns", "SSC CHSL patterns", "Frequently asked types"]
+          difficulty: "intermediate"
+          formulas: ["SSC exam strategy"]
+          duration_target_minutes: 10
+
+        - part: 96
+          title: "Verbal Reasoning - Previous Year Banking Questions"
+          subtopics: ["IBPS PO patterns", "SBI PO patterns", "Clerk exam patterns"]
+          difficulty: "intermediate"
+          formulas: ["Banking exam strategy"]
+          duration_target_minutes: 10
+
+        - part: 97
+          title: "Verbal Reasoning - Previous Year RRB Questions"
+          subtopics: ["RRB NTPC patterns", "Group D patterns", "ALP patterns"]
+          difficulty: "intermediate"
+          formulas: ["Railway exam strategy"]
+          duration_target_minutes: 10
+
+        - part: 98
+          title: "Verbal Reasoning - Speed & Accuracy Techniques"
+          subtopics: ["Time-saving shortcuts", "Elimination method", "Smart guessing"]
+          difficulty: "advanced"
+          formulas: ["Speed solving framework"]
+          duration_target_minutes: 8
+
+        - part: 99
+          title: "Verbal Reasoning - Common Mistakes & Traps"
+          subtopics: ["Negative marking traps", "Assumption errors", "Reading carefully"]
+          difficulty: "advanced"
+          formulas: ["Error prevention checklist"]
+          duration_target_minutes: 8
+
+        - part: 100
+          title: "Verbal Reasoning - Complete Revision & Summary"
+          subtopics: ["All topics quick recap", "Formula sheet", "Final tips"]
+          difficulty: "advanced"
+          formulas: ["Master formula sheet"]
+          duration_target_minutes: 10
+
+    # ============================================================
+    # ANALYTICAL REASONING (Parts 101-200)
+    # ============================================================
+    - name: "Seating Arrangement (Analytical)"
+      category: "analytical_reasoning"
+      topics:
+        - part: 101
+          title: "Analytical Seating - Rectangular Table"
+          subtopics: ["4/6/8 person tables", "Corner vs side positions", "Facing conditions"]
+          difficulty: "intermediate"
+          formulas: ["Rectangular position mapping"]
+          duration_target_minutes: 10
+
+        - part: 102
+          title: "Analytical Seating - Square Table"
+          subtopics: ["4-person square", "Corner seating", "Facing determination"]
+          difficulty: "intermediate"
+          formulas: ["Square table rules"]
+          duration_target_minutes: 10
+
+        - part: 103
+          title: "Analytical Seating - Complex Multi-Variable"
+          subtopics: ["Profession + City + Seat", "3-variable arrangement", "Practice problems"]
+          difficulty: "advanced"
+          formulas: ["Multi-variable tabulation"]
+          duration_target_minutes: 10
+
+    - name: "Complex Puzzles"
+      category: "analytical_reasoning"
+      topics:
+        - part: 104
+          title: "Tabulation Puzzles"
+          subtopics: ["Creating tables from clues", "Row-column mapping", "Systematic approach"]
+          difficulty: "intermediate"
+          formulas: ["Tabulation method"]
+          duration_target_minutes: 10
+
+        - part: 105
+          title: "Sequential Puzzles"
+          subtopics: ["Order/rank from conditions", "Before/after clues", "Elimination"]
+          difficulty: "intermediate"
+          formulas: ["Sequential ordering technique"]
+          duration_target_minutes: 10
+
+        - part: 106
+          title: "Selection & Team Formation Puzzles"
+          subtopics: ["Team selection rules", "Inclusion/exclusion conditions", "Group formation"]
+          difficulty: "intermediate"
+          formulas: ["Selection constraint framework"]
+          duration_target_minutes: 10
+
+        - part: 107
+          title: "Multi-Level Puzzles"
+          subtopics: ["Floor + Department + Age", "3+ variable puzzles", "Practice problems"]
+          difficulty: "advanced"
+          formulas: ["Multi-level matrix solving"]
+          duration_target_minutes: 10
+
+    - name: "Logical Deduction"
+      category: "analytical_reasoning"
+      topics:
+        - part: 108
+          title: "Logical Deduction - If-Then Statements"
+          subtopics: ["Conditional logic", "Contrapositive", "Biconditional"]
+          difficulty: "intermediate"
+          formulas: ["If P then Q → Contrapositive: If not Q then not P"]
+          duration_target_minutes: 8
+
+        - part: 109
+          title: "Logical Deduction - Negation & Contradiction"
+          subtopics: ["Negating complex statements", "Finding contradictions", "Proof by contradiction"]
+          difficulty: "intermediate"
+          formulas: ["De Morgan's Laws: ~(A∧B) = ~A∨~B"]
+          duration_target_minutes: 8
+
+        - part: 110
+          title: "Logical Deduction - Truth Tables"
+          subtopics: ["AND, OR, NOT operations", "Truth table construction", "Tautology & contradiction"]
+          difficulty: "intermediate"
+          formulas: ["Truth table patterns"]
+          duration_target_minutes: 8
+
+    - name: "Critical Reasoning"
+      category: "analytical_reasoning"
+      topics:
+        - part: 111
+          title: "Critical Reasoning - Strengthen & Weaken"
+          subtopics: ["Identifying argument structure", "Strengthening evidence", "Weakening evidence"]
+          difficulty: "intermediate"
+          formulas: ["Argument structure: Premise → Conclusion"]
+          duration_target_minutes: 8
+
+        - part: 112
+          title: "Critical Reasoning - Assumptions & Flaws"
+          subtopics: ["Unstated assumptions", "Logical fallacies", "Flaw identification"]
+          difficulty: "advanced"
+          formulas: ["Common logical fallacies list"]
+          duration_target_minutes: 8
+
+        - part: 113
+          title: "Critical Reasoning - Inference & Conclusion"
+          subtopics: ["Valid inferences", "Must be true vs could be true", "Scope of inference"]
+          difficulty: "intermediate"
+          formulas: ["Inference strength hierarchy"]
+          duration_target_minutes: 8
+
+    - name: "Analytical Pattern Recognition"
+      category: "analytical_reasoning"
+      topics:
+        - part: 114
+          title: "Pattern Recognition - Visual Patterns"
+          subtopics: ["Rotation sequences", "Shading patterns", "Element movement"]
+          difficulty: "beginner"
+          formulas: ["Standard rotation: 90°, 180°, 270°"]
+          duration_target_minutes: 8
+
+        - part: 115
+          title: "Pattern Recognition - Number Matrices"
+          subtopics: ["3×3 number matrices", "Row/column/diagonal patterns", "Missing number"]
+          difficulty: "intermediate"
+          formulas: ["Row sum, Column sum, Diagonal patterns"]
+          duration_target_minutes: 8
+
+        - part: 116
+          title: "Pattern Recognition - Complex Figures"
+          subtopics: ["Multi-element figures", "Nested patterns", "Transformation rules"]
+          difficulty: "advanced"
+          formulas: ["Multi-layer transformation analysis"]
+          duration_target_minutes: 10
+
+    - name: "Logical Games & Scenarios"
+      category: "analytical_reasoning"
+      topics:
+        - part: 117
+          title: "Scheduling & Timetable Problems"
+          subtopics: ["Event scheduling", "Time slot allocation", "Constraint satisfaction"]
+          difficulty: "intermediate"
+          formulas: ["Time slot mapping technique"]
+          duration_target_minutes: 10
+
+        - part: 118
+          title: "Matching & Pairing Problems"
+          subtopics: ["One-to-one matching", "Elimination-based pairing", "Bi-directional matching"]
+          difficulty: "intermediate"
+          formulas: ["Matching matrix method"]
+          duration_target_minutes: 10
+
+        - part: 119
+          title: "Grouping & Classification Problems"
+          subtopics: ["Group formation rules", "Mutual exclusion", "Overlapping groups"]
+          difficulty: "intermediate"
+          formulas: ["Group constraint satisfaction"]
+          duration_target_minutes: 10
+
+        - part: 120
+          title: "Ordering & Sequencing Problems"
+          subtopics: ["Complete ordering from partial clues", "Minimum comparisons", "Ambiguity handling"]
+          difficulty: "advanced"
+          formulas: ["Partial order to total order"]
+          duration_target_minutes: 10
+
+    - name: "Decision Making"
+      category: "analytical_reasoning"
+      topics:
+        - part: 121
+          title: "Decision Making - Criteria Based"
+          subtopics: ["Multiple criteria evaluation", "Priority ordering", "Threshold conditions"]
+          difficulty: "intermediate"
+          formulas: ["Decision matrix method"]
+          duration_target_minutes: 8
+
+        - part: 122
+          title: "Decision Making - Case Study Based"
+          subtopics: ["Scenario analysis", "Best course of action", "Risk assessment"]
+          difficulty: "advanced"
+          formulas: ["Decision tree framework"]
+          duration_target_minutes: 10
+
+    - name: "Analytical Puzzles - Advanced"
+      category: "analytical_reasoning"
+      topics:
+        - part: 123
+          title: "Grid Puzzles - Sudoku Type"
+          subtopics: ["4×4 mini Sudoku", "Latin squares", "Constraint propagation"]
+          difficulty: "intermediate"
+          formulas: ["Row-column-box uniqueness"]
+          duration_target_minutes: 10
+
+        - part: 124
+          title: "Path & Route Puzzles"
+          subtopics: ["Shortest path", "Euler path", "Hamilton path concepts"]
+          difficulty: "intermediate"
+          formulas: ["Graph traversal basics"]
+          duration_target_minutes: 10
+
+        - part: 125
+          title: "Truth-Teller & Liar Puzzles"
+          subtopics: ["Knights and knaves", "Identifying truth-tellers", "Mixed populations"]
+          difficulty: "advanced"
+          formulas: ["Assume-and-check method"]
+          duration_target_minutes: 10
+
+        - part: 126
+          title: "Weighing & Measurement Puzzles"
+          subtopics: ["Balance scale problems", "Minimum weighings", "Coin problems"]
+          difficulty: "advanced"
+          formulas: ["Binary search on weights", "3^n capacity with ternary"]
+          duration_target_minutes: 10
+
+        - part: 127
+          title: "River Crossing Puzzles"
+          subtopics: ["Classic crossing problems", "Constraint-based solutions", "Minimum trips"]
+          difficulty: "advanced"
+          formulas: ["State space exploration"]
+          duration_target_minutes: 10
+
+    - name: "Set Theory & Venn Diagrams (Analytical)"
+      category: "analytical_reasoning"
+      topics:
+        - part: 128
+          title: "Set Theory - Operations & Properties"
+          subtopics: ["Union, Intersection, Difference", "Complement", "Power set"]
+          difficulty: "beginner"
+          formulas: ["n(A∪B) = n(A) + n(B) - n(A∩B)", "|P(A)| = 2^n"]
+          duration_target_minutes: 8
+
+        - part: 129
+          title: "Venn Diagrams - Data Interpretation"
+          subtopics: ["Reading Venn diagrams with data", "Maximum/Minimum problems", "Percentage calculations"]
+          difficulty: "intermediate"
+          formulas: ["Region-wise calculation method"]
+          duration_target_minutes: 8
+
+        - part: 130
+          title: "Venn Diagrams - Complex 3-4 Set Problems"
+          subtopics: ["Four-set Venn diagrams", "At least/At most problems", "Exactly N sets"]
+          difficulty: "advanced"
+          formulas: ["Inclusion-exclusion principle extended"]
+          duration_target_minutes: 10
+
+    - name: "Binary Logic & Propositional Logic"
+      category: "analytical_reasoning"
+      topics:
+        - part: 131
+          title: "Propositional Logic Basics"
+          subtopics: ["Propositions", "Logical connectives", "Well-formed formulas"]
+          difficulty: "beginner"
+          formulas: ["AND (∧), OR (∨), NOT (¬), IMPLIES (→), IFF (↔)"]
+          duration_target_minutes: 8
+
+        - part: 132
+          title: "Propositional Logic - Equivalences"
+          subtopics: ["Logical equivalences", "Simplification", "Normal forms"]
+          difficulty: "intermediate"
+          formulas: ["Distribution, Association, Commutation laws"]
+          duration_target_minutes: 8
+
+        - part: 133
+          title: "Predicate Logic Basics"
+          subtopics: ["Quantifiers (∀, ∃)", "Scope", "Negation of quantified statements"]
+          difficulty: "intermediate"
+          formulas: ["¬(∀x P(x)) ≡ ∃x ¬P(x)", "¬(∃x P(x)) ≡ ∀x ¬P(x)"]
+          duration_target_minutes: 8
+
+    - name: "Analytical Reasoning - Miscellaneous"
+      category: "analytical_reasoning"
+      topics:
+        - part: 134
+          title: "Coded Direction & Distance"
+          subtopics: ["Symbol-based directions", "Coded navigation", "Final position"]
+          difficulty: "intermediate"
+          formulas: ["Direction decoding technique"]
+          duration_target_minutes: 8
+
+        - part: 135
+          title: "Machine Input-Output (Analytical)"
+          subtopics: ["Complex sorting rules", "Operation identification", "Predicting output"]
+          difficulty: "advanced"
+          formulas: ["Rule extraction method"]
+          duration_target_minutes: 10
+
+        - part: 136
+          title: "Number & Letter Puzzles (Analytical)"
+          subtopics: ["Cryptarithmetic", "Alphametic puzzles", "Digit substitution"]
+          difficulty: "advanced"
+          formulas: ["Carry analysis", "Digit constraint propagation"]
+          duration_target_minutes: 10
+
+    - name: "Data Interpretation (Logic Based)"
+      category: "analytical_reasoning"
+      topics:
+        - part: 137
+          title: "Table-Based Logical Reasoning"
+          subtopics: ["Extracting logic from tables", "Conditional rules from data", "Missing data inference"]
+          difficulty: "intermediate"
+          formulas: ["Table analysis framework"]
+          duration_target_minutes: 10
+
+        - part: 138
+          title: "Chart-Based Logical Reasoning"
+          subtopics: ["Bar chart reasoning", "Pie chart reasoning", "Line graph reasoning"]
+          difficulty: "intermediate"
+          formulas: ["Visual data to logic conversion"]
+          duration_target_minutes: 10
+
+    - name: "Spatial Reasoning"
+      category: "analytical_reasoning"
+      topics:
+        - part: 139
+          title: "Spatial Reasoning - 2D Transformations"
+          subtopics: ["Translation", "Rotation", "Reflection", "Scaling"]
+          difficulty: "intermediate"
+          formulas: ["Transformation matrices (conceptual)"]
+          duration_target_minutes: 8
+
+        - part: 140
+          title: "Spatial Reasoning - 3D Visualization"
+          subtopics: ["Cube views", "3D to 2D projection", "Cross-sections"]
+          difficulty: "advanced"
+          formulas: ["View projection rules"]
+          duration_target_minutes: 10
+
+        - part: 141
+          title: "Spatial Reasoning - Map & Plan Reading"
+          subtopics: ["Floor plan interpretation", "Map direction", "Scale-based distance"]
+          difficulty: "intermediate"
+          formulas: ["Scale calculation: Actual = Map × Scale factor"]
+          duration_target_minutes: 8
+
+    - name: "Analytical Ability - CAT/MBA Style"
+      category: "analytical_reasoning"
+      topics:
+        - part: 142
+          title: "Analytical Reasoning - Constraint Satisfaction"
+          subtopics: ["CSP approach", "Variable-domain-constraint", "Arc consistency"]
+          difficulty: "advanced"
+          formulas: ["CSP framework"]
+          duration_target_minutes: 10
+
+        - part: 143
+          title: "Analytical Reasoning - Network Analysis"
+          subtopics: ["Relationship networks", "Information flow", "Connection mapping"]
+          difficulty: "advanced"
+          formulas: ["Network graph techniques"]
+          duration_target_minutes: 10
+
+        - part: 144
+          title: "Analytical Reasoning - Game Theory Basics"
+          subtopics: ["Zero-sum games", "Dominant strategy", "Minimax concept"]
+          difficulty: "advanced"
+          formulas: ["Payoff matrix analysis"]
+          duration_target_minutes: 10
+
+    - name: "Coding & Decoding (Analytical)"
+      category: "analytical_reasoning"
+      topics:
+        - part: 145
+          title: "Analytical Coding - Multi-Layer"
+          subtopics: ["Double encryption", "Layered coding systems", "Complex decoding"]
+          difficulty: "advanced"
+          formulas: ["Multi-layer decoding protocol"]
+          duration_target_minutes: 10
+
+        - part: 146
+          title: "Analytical Coding - Pattern-Based"
+          subtopics: ["Position-dependent coding", "Contextual coding", "Word-sentence codes"]
+          difficulty: "advanced"
+          formulas: ["Context-aware decoding"]
+          duration_target_minutes: 10
+
+    - name: "Arrangement & Distribution (Analytical)"
+      category: "analytical_reasoning"
+      topics:
+        - part: 147
+          title: "Complex Linear Arrangement"
+          subtopics: ["10+ persons", "Multiple rows", "Variable-facing directions"]
+          difficulty: "advanced"
+          formulas: ["Large arrangement strategy"]
+          duration_target_minutes: 10
+
+        - part: 148
+          title: "Complex Circular Arrangement"
+          subtopics: ["12+ persons circular", "Inner-outer circles", "Multi-ring arrangement"]
+          difficulty: "advanced"
+          formulas: ["Multi-ring mapping"]
+          duration_target_minutes: 10
+
+        - part: 149
+          title: "Quantity Distribution"
+          subtopics: ["Amount splitting", "Ratio-based distribution", "Conditional allocation"]
+          difficulty: "intermediate"
+          formulas: ["Distribution equation method"]
+          duration_target_minutes: 10
+
+        - part: 150
+          title: "Task Assignment Puzzles"
+          subtopics: ["Person-task-day mapping", "Shift scheduling", "Resource allocation"]
+          difficulty: "advanced"
+          formulas: ["Assignment matrix"]
+          duration_target_minutes: 10
+
+    - name: "Number-Based Analytical Reasoning"
+      category: "analytical_reasoning"
+      topics:
+        - part: 151
+          title: "Number Puzzles - Operations"
+          subtopics: ["Finding missing operators", "Equation building", "Target number"]
+          difficulty: "intermediate"
+          formulas: ["BODMAS application", "Reverse engineering"]
+          duration_target_minutes: 8
+
+        - part: 152
+          title: "Number Puzzles - Digital Root & Properties"
+          subtopics: ["Digital root", "Divisibility-based puzzles", "Number theory tricks"]
+          difficulty: "intermediate"
+          formulas: ["Digital root = n mod 9", "Divisibility rules 2-11"]
+          duration_target_minutes: 8
+
+        - part: 153
+          title: "Number System - Base Conversion"
+          subtopics: ["Binary, Octal, Hex", "Base conversion method", "Arithmetic in different bases"]
+          difficulty: "intermediate"
+          formulas: ["Decimal to base-n: repeated division"]
+          duration_target_minutes: 8
+
+    - name: "Probability & Combinatorics (Logical)"
+      category: "analytical_reasoning"
+      topics:
+        - part: 154
+          title: "Basic Counting Principles"
+          subtopics: ["Addition principle", "Multiplication principle", "Arrangements"]
+          difficulty: "beginner"
+          formulas: ["nPr = n!/(n-r)!", "nCr = n!/r!(n-r)!"]
+          duration_target_minutes: 8
+
+        - part: 155
+          title: "Permutation & Combination in Reasoning"
+          subtopics: ["Seating count", "Team formation count", "Arrangement with restrictions"]
+          difficulty: "intermediate"
+          formulas: ["Circular permutation = (n-1)!", "With restrictions: Total - Restricted"]
+          duration_target_minutes: 8
+
+        - part: 156
+          title: "Probability in Logical Reasoning"
+          subtopics: ["Event probability", "Conditional probability", "Expected value"]
+          difficulty: "intermediate"
+          formulas: ["P(A) = Favorable/Total", "P(A|B) = P(A∩B)/P(B)"]
+          duration_target_minutes: 8
+
+    - name: "Analytical Reasoning Practice Sets"
+      category: "analytical_reasoning"
+      topics:
+        - part: 157
+          title: "Analytical Practice Set 1 - Seating & Arrangement"
+          subtopics: ["Mixed difficulty problems", "Time-bound practice", "Strategy tips"]
+          difficulty: "intermediate"
+          formulas: ["Quick solving framework"]
+          duration_target_minutes: 10
+
+        - part: 158
+          title: "Analytical Practice Set 2 - Puzzles & Distribution"
+          subtopics: ["Complex puzzles", "Speed techniques", "Common patterns"]
+          difficulty: "intermediate"
+          formulas: ["Pattern recognition shortcuts"]
+          duration_target_minutes: 10
+
+        - part: 159
+          title: "Analytical Practice Set 3 - Logic & Deduction"
+          subtopics: ["Critical reasoning mix", "Syllogism variations", "Statement problems"]
+          difficulty: "intermediate"
+          formulas: ["Logical reasoning framework"]
+          duration_target_minutes: 10
+
+        - part: 160
+          title: "Analytical Practice Set 4 - Visual & Spatial"
+          subtopics: ["Pattern completion", "Spatial reasoning", "Figure analysis"]
+          difficulty: "intermediate"
+          formulas: ["Visual pattern analysis"]
+          duration_target_minutes: 10
+
+        - part: 161
+          title: "Analytical Practice Set 5 - Comprehensive"
+          subtopics: ["All analytical topics mixed", "Exam simulation", "Performance review"]
+          difficulty: "advanced"
+          formulas: ["Comprehensive strategy"]
+          duration_target_minutes: 10
+
+    - name: "Exam-Specific Analytical Reasoning"
+      category: "analytical_reasoning"
+      topics:
+        - part: 162
+          title: "SSC CGL - Analytical Reasoning Special"
+          subtopics: ["CGL-specific patterns", "Previous year analysis", "High-frequency topics"]
+          difficulty: "intermediate"
+          formulas: ["SSC CGL reasoning strategy"]
+          duration_target_minutes: 10
+
+        - part: 163
+          title: "SSC CHSL - Analytical Reasoning Special"
+          subtopics: ["CHSL-specific patterns", "Difficulty level analysis", "Quick methods"]
+          difficulty: "intermediate"
+          formulas: ["SSC CHSL reasoning strategy"]
+          duration_target_minutes: 10
+
+        - part: 164
+          title: "IBPS PO - Analytical Reasoning Special"
+          subtopics: ["Banking PO patterns", "Puzzle-heavy sets", "Time management"]
+          difficulty: "advanced"
+          formulas: ["Banking exam analytical strategy"]
+          duration_target_minutes: 10
+
+        - part: 165
+          title: "IBPS Clerk - Analytical Reasoning Special"
+          subtopics: ["Clerk exam patterns", "Moderate difficulty", "Sectional timing"]
+          difficulty: "intermediate"
+          formulas: ["Clerk exam strategy"]
+          duration_target_minutes: 10
+
+        - part: 166
+          title: "SBI PO - Analytical Reasoning Special"
+          subtopics: ["SBI specific patterns", "High difficulty puzzles", "New pattern questions"]
+          difficulty: "advanced"
+          formulas: ["SBI PO reasoning strategy"]
+          duration_target_minutes: 10
+
+        - part: 167
+          title: "RBI Grade B - Analytical Reasoning Special"
+          subtopics: ["RBI exam patterns", "High-order reasoning", "Data-logic integration"]
+          difficulty: "advanced"
+          formulas: ["RBI reasoning strategy"]
+          duration_target_minutes: 10
+
+        - part: 168
+          title: "RRB NTPC - Analytical Reasoning Special"
+          subtopics: ["NTPC specific patterns", "CBT-1 and CBT-2", "Mixed reasoning"]
+          difficulty: "intermediate"
+          formulas: ["RRB NTPC strategy"]
+          duration_target_minutes: 10
+
+        - part: 169
+          title: "UPSC CSAT - Analytical Reasoning Special"
+          subtopics: ["CSAT Paper 2 patterns", "Comprehension-based reasoning", "Decision making"]
+          difficulty: "advanced"
+          formulas: ["CSAT reasoning strategy"]
+          duration_target_minutes: 10
+
+        - part: 170
+          title: "CAT/XAT - Analytical Reasoning Special"
+          subtopics: ["LRDI section patterns", "Set-based reasoning", "Time-intensive problems"]
+          difficulty: "advanced"
+          formulas: ["CAT LRDI strategy"]
+          duration_target_minutes: 10
+
+    - name: "Advanced Topics"
+      category: "analytical_reasoning"
+      topics:
+        - part: 171
+          title: "Logical Connectives - Advanced Applications"
+          subtopics: ["Multi-premise arguments", "Complex truth tables", "Logical proof"]
+          difficulty: "advanced"
+          formulas: ["Modus Ponens, Modus Tollens, Disjunctive Syllogism"]
+          duration_target_minutes: 10
+
+        - part: 172
+          title: "Analytical Geometry in Reasoning"
+          subtopics: ["Coordinate-based reasoning", "Distance & midpoint", "Geometric logic"]
+          difficulty: "advanced"
+          formulas: ["Distance = √((x2-x1)² + (y2-y1)²)"]
+          duration_target_minutes: 10
+
+        - part: 173
+          title: "Algorithmic Thinking"
+          subtopics: ["Step-by-step problem solving", "Flowchart reasoning", "Pseudocode interpretation"]
+          difficulty: "advanced"
+          formulas: ["Algorithm efficiency concepts"]
+          duration_target_minutes: 10
+
+        - part: 174
+          title: "Mathematical Reasoning - Sequences & Convergence"
+          subtopics: ["Converging sequences", "Recursive definitions", "Limit concepts"]
+          difficulty: "advanced"
+          formulas: ["Recursive formulas", "Limit intuition"]
+          duration_target_minutes: 10
+
+        - part: 175
+          title: "Symbolic Logic & Formal Systems"
+          subtopics: ["Formal proof systems", "Rules of inference", "Derivation"]
+          difficulty: "advanced"
+          formulas: ["Hypothetical Syllogism, Constructive Dilemma"]
+          duration_target_minutes: 10
+
+    - name: "Topic-Wise Revision"
+      category: "analytical_reasoning"
+      topics:
+        - part: 176
+          title: "Revision - Number & Letter Series (Complete)"
+          subtopics: ["All series types", "Quick identification", "Common traps"]
+          difficulty: "intermediate"
+          formulas: ["Series type cheat sheet"]
+          duration_target_minutes: 10
+
+        - part: 177
+          title: "Revision - Coding-Decoding & Analogy (Complete)"
+          subtopics: ["All coding types", "Analogy shortcuts", "Speed methods"]
+          difficulty: "intermediate"
+          formulas: ["Coding-Analogy cheat sheet"]
+          duration_target_minutes: 10
+
+        - part: 178
+          title: "Revision - Blood Relations & Direction (Complete)"
+          subtopics: ["Family tree shortcuts", "Direction diagram", "Combined problems"]
+          difficulty: "intermediate"
+          formulas: ["Relation-Direction cheat sheet"]
+          duration_target_minutes: 10
+
+        - part: 179
+          title: "Revision - Syllogism & Statements (Complete)"
+          subtopics: ["All syllogism rules", "Statement type summary", "Quick verification"]
+          difficulty: "intermediate"
+          formulas: ["Syllogism master rules"]
+          duration_target_minutes: 10
+
+        - part: 180
+          title: "Revision - Arrangement & Seating (Complete)"
+          subtopics: ["All arrangement types", "Solving approach summary", "Practice"]
+          difficulty: "intermediate"
+          formulas: ["Arrangement solving framework"]
+          duration_target_minutes: 10
+
+        - part: 181
+          title: "Revision - Puzzles (Complete)"
+          subtopics: ["All puzzle types", "Strategy selection", "Time management"]
+          difficulty: "intermediate"
+          formulas: ["Puzzle master strategy"]
+          duration_target_minutes: 10
+
+        - part: 182
+          title: "Revision - Visual & Spatial Reasoning (Complete)"
+          subtopics: ["All figure types", "Transformation rules", "Quick identification"]
+          difficulty: "intermediate"
+          formulas: ["Visual reasoning cheat sheet"]
+          duration_target_minutes: 10
+
+        - part: 183
+          title: "Revision - Clock, Calendar & Dice (Complete)"
+          subtopics: ["All formulas", "Quick calculation", "Practice problems"]
+          difficulty: "intermediate"
+          formulas: ["Clock-Calendar-Dice formula sheet"]
+          duration_target_minutes: 10
+
+    - name: "Mock Tests & Exam Simulation"
+      category: "analytical_reasoning"
+      topics:
+        - part: 184
+          title: "Mock Test 1 - SSC Pattern (30 Questions)"
+          subtopics: ["Full mock test", "Solution discussion", "Score analysis"]
+          difficulty: "intermediate"
+          formulas: ["SSC scoring strategy"]
+          duration_target_minutes: 12
+
+        - part: 185
+          title: "Mock Test 2 - Banking Pattern (35 Questions)"
+          subtopics: ["Full mock test", "Solution discussion", "Score analysis"]
+          difficulty: "intermediate"
+          formulas: ["Banking scoring strategy"]
+          duration_target_minutes: 12
+
+        - part: 186
+          title: "Mock Test 3 - RRB Pattern (30 Questions)"
+          subtopics: ["Full mock test", "Solution discussion", "Score analysis"]
+          difficulty: "intermediate"
+          formulas: ["RRB scoring strategy"]
+          duration_target_minutes: 12
+
+        - part: 187
+          title: "Mock Test 4 - UPSC CSAT Pattern (20 Questions)"
+          subtopics: ["Full mock test", "Solution discussion", "Score analysis"]
+          difficulty: "advanced"
+          formulas: ["CSAT scoring strategy"]
+          duration_target_minutes: 12
+
+        - part: 188
+          title: "Mock Test 5 - Mixed Pattern (40 Questions)"
+          subtopics: ["Comprehensive mock", "All topics mixed", "Full exam simulation"]
+          difficulty: "advanced"
+          formulas: ["Overall exam strategy"]
+          duration_target_minutes: 12
+
+    - name: "Strategy & Exam Preparation"
+      category: "analytical_reasoning"
+      topics:
+        - part: 189
+          title: "Time Management Strategy for Reasoning Section"
+          subtopics: ["Question selection", "Time per question", "Skip strategy"]
+          difficulty: "intermediate"
+          formulas: ["Time allocation formula"]
+          duration_target_minutes: 8
+
+        - part: 190
+          title: "Accuracy Improvement Techniques"
+          subtopics: ["Double-checking methods", "Elimination technique", "Confidence scoring"]
+          difficulty: "intermediate"
+          formulas: ["Net score = Correct - Penalty"]
+          duration_target_minutes: 8
+
+        - part: 191
+          title: "Question Reading & Interpretation Skills"
+          subtopics: ["Reading comprehension for reasoning", "Keyword identification", "Trap avoidance"]
+          difficulty: "intermediate"
+          formulas: ["Question analysis framework"]
+          duration_target_minutes: 8
+
+        - part: 192
+          title: "Mental Math & Quick Calculation"
+          subtopics: ["Vedic math shortcuts", "Approximation techniques", "Pattern recognition"]
+          difficulty: "intermediate"
+          formulas: ["Quick calculation tricks"]
+          duration_target_minutes: 8
+
+        - part: 193
+          title: "Exam Day Strategy & Mindset"
+          subtopics: ["Pre-exam preparation", "Stress management", "Section ordering strategy"]
+          difficulty: "beginner"
+          formulas: ["Exam day checklist"]
+          duration_target_minutes: 8
+
+    - name: "Final Series - Complete Mastery"
+      category: "analytical_reasoning"
+      topics:
+        - part: 194
+          title: "Top 50 Most Asked Reasoning Questions - Part 1"
+          subtopics: ["High-frequency questions", "Pattern analysis", "Quick solutions"]
+          difficulty: "intermediate"
+          formulas: ["Frequency-based preparation"]
+          duration_target_minutes: 10
+
+        - part: 195
+          title: "Top 50 Most Asked Reasoning Questions - Part 2"
+          subtopics: ["Continued high-frequency questions", "Variation analysis", "Practice"]
+          difficulty: "intermediate"
+          formulas: ["Variation handling technique"]
+          duration_target_minutes: 10
+
+        - part: 196
+          title: "Hardest Reasoning Questions - Challenging Problems"
+          subtopics: ["Difficulty level 5 questions", "Complex multi-step", "Expert techniques"]
+          difficulty: "advanced"
+          formulas: ["Advanced problem-solving framework"]
+          duration_target_minutes: 10
+
+        - part: 197
+          title: "New Pattern Questions - Latest Exam Trends"
+          subtopics: ["2024-2025 new patterns", "Emerging question types", "Adaptation strategies"]
+          difficulty: "advanced"
+          formulas: ["New pattern identification"]
+          duration_target_minutes: 10
+
+        - part: 198
+          title: "Complete Formula Sheet & Quick Reference"
+          subtopics: ["All formulas compiled", "Category-wise reference", "Last-minute revision"]
+          difficulty: "intermediate"
+          formulas: ["MASTER FORMULA COMPILATION"]
+          duration_target_minutes: 10
+
+        - part: 199
+          title: "Last-Minute Revision Tips & Strategy"
+          subtopics: ["7-day revision plan", "Priority topics", "Confidence building"]
+          difficulty: "intermediate"
+          formulas: ["Revision priority matrix"]
+          duration_target_minutes: 8
+
+        - part: 200
+          title: "Series Finale - You Are Ready! Complete Summary"
+          subtopics: ["Journey recap", "Key takeaways", "Motivational conclusion", "Next steps"]
+          difficulty: "intermediate"
+          formulas: ["Success formula: Consistency + Practice + Strategy"]
+          duration_target_minutes: 10
