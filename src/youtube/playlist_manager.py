@@ -99,15 +99,15 @@ class PlaylistManager:
                 }
             }
 
-            if position is not None:
-                body["snippet"]["position"] = position
+            # Don't set position — add to end of playlist
+            # YouTube playlists need "manual sorting" enabled for position to work
 
             youtube.playlistItems().insert(
                 part="snippet",
                 body=body
             ).execute()
 
-            logger.info(f"Video {video_id} added to playlist at position {position}")
+            logger.info(f"Video {video_id} added to playlist {playlist_id}")
             return True
 
         except Exception as e:
