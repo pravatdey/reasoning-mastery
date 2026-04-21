@@ -18,7 +18,8 @@ class PlaylistManager:
     def __init__(self, auth: YouTubeAuth, config_path: str = "config/settings.yaml"):
         self.auth = auth
         self.config = self._load_config(config_path)
-        self._playlist_id: Optional[str] = None
+        # Use existing playlist ID from config if available
+        self._playlist_id: Optional[str] = self.config.get("youtube", {}).get("playlist_id")
 
     def _load_config(self, config_path: str) -> Dict:
         try:
