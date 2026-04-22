@@ -298,12 +298,12 @@ class SlideRenderer:
             font=self.font_section
         )
         bbox = draw.textbbox((Layout.MARGIN_X, y), text, font=self.font_section)
-        line_y = bbox[3] + 6
+        line_y = bbox[3] + 8
         draw.rectangle(
-            [Layout.MARGIN_X, line_y, Layout.MARGIN_X + 80, line_y + 3],
+            [Layout.MARGIN_X, line_y, Layout.MARGIN_X + 100, line_y + 4],
             fill=hex_to_rgb(accent)
         )
-        return line_y + 20
+        return line_y + 28
 
     def _wrap_text(self, text: str, font: ImageFont.FreeTypeFont,
                     max_width: int) -> list:
@@ -378,7 +378,7 @@ class SlideRenderer:
                 font=self.font_title,
                 anchor="mm"
             )
-            y += 55
+            y += 100
 
         # Category badge
         cat_text = scene.topic_category.replace("_", " ").upper()
@@ -424,14 +424,14 @@ class SlideRenderer:
             fill=hex_to_rgb(Colors.WHITE),
             font=self.font_section
         )
-        y += 40
+        y += 68
 
         # Content text with wrapping
         max_width = Layout.CONTENT_WIDTH
         for line in scene.content_lines:
             wrapped = self._wrap_text(line, self.font_body_small, max_width)
             for wl in wrapped:
-                if y > Layout.CONTENT_BOTTOM - 40:
+                if y > Layout.CONTENT_BOTTOM - 60:
                     break
                 draw.text(
                     (Layout.MARGIN_X + 10, y),
@@ -439,8 +439,8 @@ class SlideRenderer:
                     fill=hex_to_rgb(Colors.TEXT_PRIMARY),
                     font=self.font_body_small
                 )
-                y += 32
-            y += 10  # gap between paragraphs
+                y += 60
+            y += 20  # gap between paragraphs
 
         # Left accent bar
         draw.rectangle(
@@ -474,7 +474,7 @@ class SlideRenderer:
         formula_lines = self._wrap_text(formula_text, self.font_formula,
                                          Layout.CONTENT_WIDTH - 2 * Layout.FORMULA_BOX_PADDING - 40)
 
-        box_h = len(formula_lines) * 48 + 2 * Layout.FORMULA_BOX_PADDING
+        box_h = len(formula_lines) * 80 + 2 * Layout.FORMULA_BOX_PADDING
         box_x = Layout.MARGIN_X + 20
         box_w = Layout.CONTENT_WIDTH - 40
         box_y = y + 10
@@ -493,13 +493,13 @@ class SlideRenderer:
         formula_y = box_y + Layout.FORMULA_BOX_PADDING
         for fl in formula_lines:
             draw.text(
-                (self.width // 2, formula_y + 16),
+                (self.width // 2, formula_y + 20),
                 fl,
                 fill=hex_to_rgb(Colors.WHITE),
                 font=self.font_formula,
                 anchor="mm"
             )
-            formula_y += 48
+            formula_y += 80
 
         y = box_y + box_h + 30
 
@@ -508,7 +508,7 @@ class SlideRenderer:
         for line in scene.content_lines:
             wrapped = self._wrap_text(line, self.font_body_small, max_width)
             for wl in wrapped:
-                if y > Layout.CONTENT_BOTTOM - 30:
+                if y > Layout.CONTENT_BOTTOM - 50:
                     break
                 draw.text(
                     (Layout.MARGIN_X + 10, y),
@@ -516,7 +516,7 @@ class SlideRenderer:
                     fill=hex_to_rgb(Colors.TEXT_PRIMARY),
                     font=self.font_body_small
                 )
-                y += 32
+                y += 60
 
         return img
 
@@ -532,7 +532,7 @@ class SlideRenderer:
         # Question in a card
         question_text = scene.highlight_text or (scene.content_lines[0] if scene.content_lines else "")
         q_lines = self._wrap_text(question_text, self.font_body, Layout.CONTENT_WIDTH - 80)
-        card_h = len(q_lines) * 38 + 40
+        card_h = len(q_lines) * 70 + 60
 
         self._draw_card(draw, Layout.MARGIN_X, y, Layout.CONTENT_WIDTH, card_h,
                          Colors.BG_CARD, accent)
@@ -552,15 +552,15 @@ class SlideRenderer:
         )
 
         # Question text
-        qy = y + 18
+        qy = y + 22
         for ql in q_lines:
             draw.text(
-                (Layout.MARGIN_X + 60, qy),
+                (Layout.MARGIN_X + 70, qy),
                 ql,
                 fill=hex_to_rgb(Colors.TEXT_PRIMARY),
                 font=self.font_body
             )
-            qy += 38
+            qy += 70
 
         y = y + card_h + 30
 
@@ -609,7 +609,7 @@ class SlideRenderer:
         for line in scene.content_lines:
             wrapped = self._wrap_text(line, self.font_body, max_w)
             for wl in wrapped:
-                if step_y > Layout.CONTENT_BOTTOM - 40:
+                if step_y > Layout.CONTENT_BOTTOM - 50:
                     break
                 draw.text(
                     (step_x, step_y),
@@ -617,8 +617,8 @@ class SlideRenderer:
                     fill=hex_to_rgb(Colors.TEXT_PRIMARY),
                     font=self.font_body
                 )
-                step_y += 36
-            step_y += 10
+                step_y += 70
+            step_y += 18
 
         # Step progress dots at bottom
         dots_y = Layout.CONTENT_BOTTOM - 20
@@ -644,7 +644,7 @@ class SlideRenderer:
         # Answer in green highlight box
         answer_text = scene.highlight_text
         a_lines = self._wrap_text(answer_text, self.font_body, Layout.CONTENT_WIDTH - 100)
-        card_h = len(a_lines) * 38 + 40
+        card_h = len(a_lines) * 70 + 60
 
         self._draw_card(draw, Layout.MARGIN_X, y, Layout.CONTENT_WIDTH, card_h,
                          Colors.GREEN_DARK, Colors.GREEN)
@@ -659,15 +659,15 @@ class SlideRenderer:
         )
 
         # Answer text
-        ay = y + 20
+        ay = y + 24
         for al in a_lines:
             draw.text(
-                (Layout.MARGIN_X + 70, ay),
+                (Layout.MARGIN_X + 80, ay),
                 al,
                 fill=hex_to_rgb(Colors.WHITE),
                 font=self.font_body
             )
-            ay += 38
+            ay += 70
 
         y = y + card_h + 30
 
@@ -675,7 +675,7 @@ class SlideRenderer:
         for line in scene.content_lines:
             wrapped = self._wrap_text(line, self.font_body_small, Layout.CONTENT_WIDTH - 20)
             for wl in wrapped:
-                if y > Layout.CONTENT_BOTTOM - 30:
+                if y > Layout.CONTENT_BOTTOM - 40:
                     break
                 draw.text(
                     (Layout.MARGIN_X + 10, y),
@@ -683,7 +683,7 @@ class SlideRenderer:
                     fill=hex_to_rgb(Colors.TEXT_SECONDARY),
                     font=self.font_body_small
                 )
-                y += 30
+                y += 60
 
         return img
 
@@ -702,7 +702,7 @@ class SlideRenderer:
             # Tip card
             tip_lines = self._wrap_text(tip, self.font_body_small,
                                          Layout.CONTENT_WIDTH - 80)
-            card_h = len(tip_lines) * 28 + 24
+            card_h = len(tip_lines) * 60 + 40
 
             self._draw_card(draw, Layout.MARGIN_X + 10, y,
                             Layout.CONTENT_WIDTH - 20, card_h, Colors.BG_CARD)
@@ -723,17 +723,17 @@ class SlideRenderer:
             )
 
             # Tip text
-            ty = y + 12
+            ty = y + 16
             for tl in tip_lines:
                 draw.text(
-                    (Layout.MARGIN_X + 65, ty),
+                    (Layout.MARGIN_X + 75, ty),
                     tl,
                     fill=hex_to_rgb(Colors.TEXT_PRIMARY),
                     font=self.font_body_small
                 )
-                ty += 28
+                ty += 60
 
-            y += card_h + 12
+            y += card_h + 20
 
         return img
 
@@ -754,8 +754,8 @@ class SlideRenderer:
                 fill=hex_to_rgb(Colors.WHITE),
                 font=self.font_body
             )
-            y += 36
-        y += 20
+            y += 70
+        y += 28
 
         # Options
         for opt in scene.options:
@@ -828,14 +828,14 @@ class SlideRenderer:
             py = y + 2
             for pl in p_lines:
                 draw.text(
-                    (Layout.MARGIN_X + 50, py),
+                    (Layout.MARGIN_X + 60, py),
                     pl,
                     fill=hex_to_rgb(Colors.TEXT_PRIMARY),
                     font=self.font_body_small
                 )
-                py += 28
+                py += 60
 
-            y = py + 14
+            y = py + 22
 
         return img
 

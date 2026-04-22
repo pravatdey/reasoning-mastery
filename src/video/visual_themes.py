@@ -65,17 +65,17 @@ class Colors:
 class Fonts:
     """Font configuration — large readable text for YouTube"""
 
-    # Font sizes — optimized for 1280x720 YouTube viewing
-    TITLE = 52
-    SECTION_LABEL = 32
-    BODY = 36
-    BODY_SMALL = 30
-    FORMULA = 42
-    SMALL = 24
-    TINY = 20
-    OPTION = 30
-    STEP_NUMBER = 28
-    BADGE = 20
+    # Font sizes — optimized for 1920x1080 Full HD YouTube viewing
+    TITLE = 88
+    SECTION_LABEL = 54
+    BODY = 58
+    BODY_SMALL = 50
+    FORMULA = 68
+    SMALL = 38
+    TINY = 32
+    OPTION = 50
+    STEP_NUMBER = 46
+    BADGE = 34
 
     # Font families (will use system fonts or custom)
     BOLD = "arialbd.ttf"
@@ -124,5 +124,5 @@ class Layout:
     STEP_CIRCLE_RADIUS = 24
 
     # Option card
-    OPTION_HEIGHT = 65
-    OPTION_GAP = 16
+    OPTION_HEIGHT = 95
+    OPTION_GAP = 24
