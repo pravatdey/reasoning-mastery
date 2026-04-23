@@ -11,8 +11,8 @@ video:
     height: 1080
   fps: 30
   codec: "libx264"
-  bitrate: "4000k"
-  preset: "medium"
+  bitrate: "10000k"
+  preset: "slow"
 
 llm:
   provider: "groq"

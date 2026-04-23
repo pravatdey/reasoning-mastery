@@ -34,7 +34,7 @@ class VideoComposer:
         video_config = self.config.get("video", {})
         self.fps = video_config.get("fps", 30)
         self.codec = video_config.get("codec", "libx264")
-        self.bitrate = video_config.get("bitrate", "2000k")
+        self.bitrate = video_config.get("bitrate", "10000k")
         self.preset = video_config.get("preset", "medium")
 
         # Intro video
