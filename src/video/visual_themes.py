@@ -30,9 +30,9 @@ class Colors:
 
     # Common
     WHITE = "#FFFFFF"
-    TEXT_PRIMARY = "#F5F5F5"
-    TEXT_SECONDARY = "#94A3B8"
-    TEXT_DIM = "#64748B"
+    TEXT_PRIMARY = "#FFFFFF"
+    TEXT_SECONDARY = "#C0CDE0"
+    TEXT_DIM = "#8899AA"
     GREEN = "#10B981"
     GREEN_BRIGHT = "#34D399"
     GREEN_DARK = "#064E3B"
@@ -66,16 +66,17 @@ class Fonts:
     """Font configuration — large readable text for YouTube"""
 
     # Font sizes — optimized for 1920x1080 Full HD YouTube viewing
-    TITLE = 88
-    SECTION_LABEL = 54
-    BODY = 58
-    BODY_SMALL = 50
-    FORMULA = 68
-    SMALL = 38
-    TINY = 32
-    OPTION = 50
-    STEP_NUMBER = 46
-    BADGE = 34
+    # YouTube compresses heavily — use larger, bolder text for readability
+    TITLE = 96
+    SECTION_LABEL = 60
+    BODY = 64
+    BODY_SMALL = 56
+    FORMULA = 72
+    SMALL = 44
+    TINY = 36
+    OPTION = 56
+    STEP_NUMBER = 52
+    BADGE = 38
 
     # Font families (will use system fonts or custom)
     BOLD = "arialbd.ttf"
