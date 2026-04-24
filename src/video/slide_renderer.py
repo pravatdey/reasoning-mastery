@@ -374,12 +374,24 @@ class SlideRenderer:
         img, draw = self._create_base(scene)
         accent = Colors.get_accent(scene.topic_category)
 
-        # Center area for title
-        center_y = self.height // 2 - 60
+        # Calculate layout from center, accounting for title wrapping
+        title_lines = self._wrap_text(scene.title, self.font_title, self.width - 240)
+        title_block_h = len(title_lines) * 110
+        # Total block: subtitle + gap + title + gap + badge
+        total_h = 60 + 30 + title_block_h + 40 + 50
+        start_y = (self.height - total_h) // 2
+
+        # Decorative line
+        line_y = start_y - 10
+        draw.rectangle(
+            [(self.width // 2 - 100), line_y, (self.width // 2 + 100), line_y + 3],
+            fill=hex_to_rgb(accent)
+        )
 
         # Series subtitle
+        subtitle_y = start_y + 20
         draw.text(
-            (self.width // 2, center_y - 60),
+            (self.width // 2, subtitle_y),
             "REASONING MASTERY",
             fill=hex_to_rgb(Colors.TEXT_SECONDARY),
             font=self.font_section,
@@ -387,8 +399,7 @@ class SlideRenderer:
         )
 
         # Main topic title (wrapped)
-        title_lines = self._wrap_text(scene.title, self.font_title, self.width - 200)
-        y = center_y
+        y = subtitle_y + 70
         for line in title_lines:
             draw.text(
                 (self.width // 2, y),
@@ -402,27 +413,20 @@ class SlideRenderer:
         # Category badge
         cat_text = scene.topic_category.replace("_", " ").upper()
         bbox = draw.textbbox((0, 0), cat_text, font=self.font_small)
-        bw = bbox[2] - bbox[0] + 30
+        bw = bbox[2] - bbox[0] + 40
         bx = (self.width - bw) // 2
-        by = y + 20
+        by = y + 30
         draw.rounded_rectangle(
-            [bx, by, bx + bw, by + 32],
-            radius=16,
+            [bx, by, bx + bw, by + 44],
+            radius=22,
             fill=hex_to_rgb(accent)
         )
         draw.text(
-            (self.width // 2, by + 16),
+            (self.width // 2, by + 22),
             cat_text,
             fill=hex_to_rgb(Colors.WHITE),
             font=self.font_small,
             anchor="mm"
-        )
-
-        # Decorative lines
-        line_y = center_y - 90
-        draw.rectangle(
-            [(self.width // 2 - 100), line_y, (self.width // 2 + 100), line_y + 2],
-            fill=hex_to_rgb(accent)
         )
 
         return img
@@ -486,7 +490,7 @@ class SlideRenderer:
                 fill=hex_to_rgb(Colors.TEXT_SECONDARY),
                 font=self.font_small
             )
-            y += 30
+            y += 55
 
         # Formula box
         formula_text = scene.highlight_text
@@ -662,26 +666,17 @@ class SlideRenderer:
 
         # Answer in green highlight box
         answer_text = scene.highlight_text
-        a_lines = self._wrap_text(answer_text, self.font_body, Layout.CONTENT_WIDTH - 100)
+        a_lines = self._wrap_text(answer_text, self.font_body, Layout.CONTENT_WIDTH - 60)
         card_h = len(a_lines) * 78 + 60
 
         self._draw_card(draw, Layout.MARGIN_X, y, Layout.CONTENT_WIDTH, card_h,
                          Colors.GREEN_DARK, Colors.GREEN)
 
-        # Checkmark
-        draw.text(
-            (Layout.MARGIN_X + 30, y + card_h // 2),
-            "\u2713",
-            fill=hex_to_rgb(Colors.GREEN),
-            font=self.font_title,
-            anchor="mm"
-        )
-
         # Answer text
-        ay = y + 24
+        ay = y + 30
         for al in a_lines:
             draw.text(
-                (Layout.MARGIN_X + 80, ay),
+                (Layout.MARGIN_X + 30, ay),
                 al,
                 fill=hex_to_rgb(Colors.WHITE),
                 font=self.font_body
@@ -828,18 +823,18 @@ class SlideRenderer:
             p_lines = self._wrap_text(point, self.font_body_small,
                                        Layout.CONTENT_WIDTH - 80)
 
-            # Checkmark circle
+            # Numbered circle
             cx = Layout.MARGIN_X + 25
             cy = y + 14
             draw.ellipse(
-                [cx - 12, cy - 12, cx + 12, cy + 12],
+                [cx - 14, cy - 14, cx + 14, cy + 14],
                 fill=hex_to_rgb(Colors.GREEN)
             )
             draw.text(
                 (cx, cy),
-                "\u2713",
+                str(i + 1),
                 fill=hex_to_rgb(Colors.WHITE),
-                font=self.font_tiny,
+                font=self.font_badge,
                 anchor="mm"
             )
 
