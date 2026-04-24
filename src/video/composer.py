@@ -91,7 +91,13 @@ class VideoComposer:
         all_clips.extend(lesson_clips)
 
         # 5. Concatenate all video clips (intro + lesson scenes)
+        # Force target resolution so zoom effects and intro video don't shrink output
+        target_w = self.config.get("video", {}).get("resolution", {}).get("width", 1920)
+        target_h = self.config.get("video", {}).get("resolution", {}).get("height", 1080)
         video = concatenate_videoclips(all_clips, method="compose")
+        # Ensure final video is exactly target resolution
+        if video.size != (target_w, target_h):
+            video = video.resize((target_w, target_h))
 
         # 6. Build audio track
         # Intro video has its own audio, narration starts after intro
@@ -139,7 +145,9 @@ class VideoComposer:
             preset=self.preset,
             audio_codec="aac",
             threads=4,
-            logger=None
+            logger=None,
+            ffmpeg_params=["-b:v", self.bitrate, "-maxrate", self.bitrate,
+                           "-bufsize", "20000k"]
         )
 
         # Cleanup
