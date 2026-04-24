@@ -42,13 +42,18 @@ class SlideRenderer:
         """Load fonts, trying system paths."""
         font_dirs = []
 
+        # Project fonts (bundled — works on all platforms including GitHub Actions)
+        font_dirs.append("assets/fonts")
+
         # Windows font directories
         if os.name == 'nt':
             font_dirs.append("C:/Windows/Fonts")
             font_dirs.append(os.path.expanduser("~/AppData/Local/Microsoft/Windows/Fonts"))
 
-        # Project fonts
-        font_dirs.append("assets/fonts")
+        # Linux font directories (GitHub Actions / Ubuntu)
+        font_dirs.append("/usr/share/fonts/truetype/msttcorefonts")
+        font_dirs.append("/usr/share/fonts/truetype/dejavu")
+        font_dirs.append("/usr/share/fonts/truetype")
 
         self._font_dirs = font_dirs
 
@@ -65,15 +70,29 @@ class SlideRenderer:
                 self._font_cache[key] = font
                 return font
 
-        # Fallback to default
+        # Fallback: try font name directly (system-installed)
         try:
             font = ImageFont.truetype(font_file, size)
             self._font_cache[key] = font
             return font
         except Exception:
-            font = ImageFont.load_default()
-            self._font_cache[key] = font
-            return font
+            pass
+
+        # Last resort: try DejaVu (available on most Linux systems)
+        for fallback in ["DejaVuSans-Bold.ttf", "DejaVuSans.ttf"]:
+            for font_dir in self._font_dirs:
+                path = os.path.join(font_dir, fallback)
+                if os.path.exists(path):
+                    logger.warning(f"Font {font_file} not found, using fallback: {path}")
+                    font = ImageFont.truetype(path, size)
+                    self._font_cache[key] = font
+                    return font
+
+        # Critical: if we reach here, text will be unreadable
+        logger.error(f"CRITICAL: No font found for {font_file} size {size}! Text will be tiny and unreadable!")
+        font = ImageFont.load_default()
+        self._font_cache[key] = font
+        return font
 
     @property
     def font_title(self):
